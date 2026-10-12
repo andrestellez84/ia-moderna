@@ -640,7 +640,9 @@ window.Quarto = {
 
   const CLAVE_AUTOR = "a2e69488ca217bd7ea47d2059cdeaa46f27ef987"; // sha1 de la clave del autor
 
-  const borrador = !!window.FORJA_BORRADOR;
+  const muestra = !!window.FORJA_MUESTRA;                 // muestra pública: tampoco bloquea
+
+  const borrador = !!window.FORJA_BORRADOR || muestra;
 
 
 
@@ -1230,7 +1232,7 @@ window.Quarto = {
 
       if (borrador || e.autor) {
 
-        panel.append(el("p", "ev-aviso", borrador ? "Borrador: la evaluación funciona, pero no bloquea ninguna sección." : "Modo autor: todas las secciones están abiertas."));
+        panel.append(el("p", "ev-aviso", borrador ? (muestra ? "Versión de muestra: la evaluación funciona, pero no bloquea ninguna sección." : "Borrador: la evaluación funciona, pero no bloquea ninguna sección.") : "Modo autor: todas las secciones están abiertas."));
 
         panel.append(boton("Reiniciar mi progreso en esta sección", () => { const x = leer(); delete x.secciones[id]; guardar(x); vista(); }, "ev-boton ev-secundario"));
 

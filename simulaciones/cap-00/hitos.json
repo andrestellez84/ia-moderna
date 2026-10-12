@@ -1,0 +1,415 @@
+[
+ {
+  "n": 1,
+  "hito": "Transformer",
+  "fecha": "2017-06-12",
+  "fecha_texto": "12 jun 2017",
+  "organizacion": "Google",
+  "aportacion": "La atención sustituye a la recurrencia",
+  "capitulos": [
+   12
+  ],
+  "ideas": [
+   "atencion"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 2,
+  "hito": "AlphaGo Zero",
+  "fecha": "2017-10-18",
+  "fecha_texto": "18 oct 2017",
+  "organizacion": "DeepMind",
+  "aportacion": "Go sobrehumano solo por auto-juego",
+  "capitulos": [
+   9
+  ],
+  "ideas": [],
+  "tendencia": false
+ },
+ {
+  "n": 3,
+  "hito": "BERT",
+  "fecha": "2018-10-11",
+  "fecha_texto": "11 oct 2018",
+  "organizacion": "Google",
+  "aportacion": "Preentrenamiento y ajuste fino",
+  "capitulos": [
+   15
+  ],
+  "ideas": [
+   "atencion",
+   "escala"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 4,
+  "hito": "GPT-2",
+  "fecha": "2019-02-14",
+  "fecha_texto": "14 feb 2019",
+  "organizacion": "OpenAI",
+  "aportacion": "Tareas resueltas sin ejemplos",
+  "capitulos": [
+   15
+  ],
+  "ideas": [
+   "atencion",
+   "escala"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 5,
+  "hito": "GPT-3",
+  "fecha": "2020-05-28",
+  "fecha_texto": "28 may 2020",
+  "organizacion": "OpenAI",
+  "aportacion": "Aprendizaje en contexto",
+  "capitulos": [
+   15,
+   16
+  ],
+  "ideas": [
+   "atencion",
+   "escala"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 6,
+  "hito": "AlphaFold 2",
+  "fecha": "2020-11-30",
+  "fecha_texto": "30 nov 2020",
+  "organizacion": "DeepMind",
+  "aportacion": "Estructura de proteínas desde la secuencia",
+  "capitulos": [
+   35
+  ],
+  "ideas": [
+   "atencion"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 7,
+  "hito": "DALL-E",
+  "fecha": "2021-01-05",
+  "fecha_texto": "5 ene 2021",
+  "organizacion": "OpenAI",
+  "aportacion": "Texto e imagen como una sola secuencia",
+  "capitulos": [
+   25
+  ],
+  "ideas": [
+   "atencion",
+   "escala"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 8,
+  "hito": "Codex / Copilot",
+  "fecha": "2021-06-29",
+  "fecha_texto": "29 jun 2021",
+  "organizacion": "OpenAI, GitHub",
+  "aportacion": "Código evaluado ejecutándolo",
+  "capitulos": [
+   30
+  ],
+  "ideas": [
+   "atencion",
+   "escala"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 9,
+  "hito": "Cadena de pensamiento y PaLM",
+  "fecha": "2022-01-28",
+  "fecha_texto": "28 ene 2022",
+  "organizacion": "Google",
+  "aportacion": "Razonamiento por pasos a gran escala",
+  "capitulos": [
+   29,
+   18
+  ],
+  "ideas": [
+   "atencion",
+   "escala",
+   "razonamiento"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 10,
+  "hito": "Stable Diffusion",
+  "fecha": "2022-08-22",
+  "fecha_texto": "22 ago 2022",
+  "organizacion": "CompVis, Runway, Stability AI",
+  "aportacion": "Difusión en espacio latente, con pesos abiertos",
+  "capitulos": [
+   26
+  ],
+  "ideas": [
+   "atencion"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 11,
+  "hito": "ChatGPT",
+  "fecha": "2022-11-30",
+  "fecha_texto": "30 nov 2022",
+  "organizacion": "OpenAI",
+  "aportacion": "Asistente alineado con preferencias humanas",
+  "capitulos": [
+   28
+  ],
+  "ideas": [
+   "atencion",
+   "escala",
+   "alineacion"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 12,
+  "hito": "GPT-4",
+  "fecha": "2023-03-14",
+  "fecha_texto": "14 mar 2023",
+  "organizacion": "OpenAI",
+  "aportacion": "Resultado del entrenamiento predicho de antemano",
+  "capitulos": [
+   17
+  ],
+  "ideas": [
+   "atencion",
+   "escala",
+   "alineacion"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 13,
+  "hito": "Sora",
+  "fecha": "2024-02-15",
+  "fecha_texto": "15 feb 2024",
+  "organizacion": "OpenAI",
+  "aportacion": "Difusión aplicada a video",
+  "capitulos": [
+   26
+  ],
+  "ideas": [
+   "atencion",
+   "escala"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 14,
+  "hito": "Claude 3",
+  "fecha": "2024-03-04",
+  "fecha_texto": "4 mar 2024",
+  "organizacion": "Anthropic",
+  "aportacion": "Contexto largo e IA Constitucional",
+  "capitulos": [
+   28,
+   21
+  ],
+  "ideas": [
+   "atencion",
+   "escala",
+   "alineacion"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 15,
+  "hito": "Llama 3",
+  "fecha": "2024-04-18",
+  "fecha_texto": "18 abr 2024",
+  "organizacion": "Meta",
+  "aportacion": "Pesos abiertos y entrenamiento pensado para el uso",
+  "capitulos": [
+   17
+  ],
+  "ideas": [
+   "atencion",
+   "escala",
+   "alineacion"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 16,
+  "hito": "AlphaFold 3",
+  "fecha": "2024-05-08",
+  "fecha_texto": "8 may 2024",
+  "organizacion": "Google DeepMind, Isomorphic Labs",
+  "aportacion": "Estructura de complejos biomoleculares",
+  "capitulos": [
+   35
+  ],
+  "ideas": [
+   "atencion"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 17,
+  "hito": "GPT-4o",
+  "fecha": "2024-05-13",
+  "fecha_texto": "13 may 2024",
+  "organizacion": "OpenAI",
+  "aportacion": "Voz, imagen y texto en una sola red",
+  "capitulos": [
+   27
+  ],
+  "ideas": [
+   "atencion",
+   "escala",
+   "alineacion"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 18,
+  "hito": "o1",
+  "fecha": "2024-09-12",
+  "fecha_texto": "12 sep 2024",
+  "organizacion": "OpenAI",
+  "aportacion": "Pensar más al responder mejora el resultado",
+  "capitulos": [
+   29
+  ],
+  "ideas": [
+   "atencion",
+   "escala",
+   "alineacion",
+   "razonamiento"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 19,
+  "hito": "DeepSeek-R1",
+  "fecha": "2025-01-20",
+  "fecha_texto": "20 ene 2025",
+  "organizacion": "DeepSeek",
+  "aportacion": "Razonamiento aprendido con recompensas verificables, en abierto",
+  "capitulos": [
+   29,
+   13
+  ],
+  "ideas": [
+   "atencion",
+   "escala",
+   "alineacion",
+   "razonamiento"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 20,
+  "hito": "Gemini 3",
+  "fecha": "2025-11-18",
+  "fecha_texto": "18 nov 2025",
+  "organizacion": "Google DeepMind",
+  "aportacion": "Modelos diseñados para agentes",
+  "capitulos": [
+   32
+  ],
+  "ideas": [
+   "atencion",
+   "escala",
+   "alineacion",
+   "razonamiento"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 21,
+  "hito": "IA física y soberana",
+  "fecha": "2025-12-15",
+  "fecha_texto": "2024–2026",
+  "organizacion": "Varias",
+  "aportacion": "Robótica con modelos de lenguaje y despliegue propio",
+  "capitulos": [
+   36,
+   38
+  ],
+  "ideas": [
+   "atencion",
+   "escala"
+  ],
+  "tendencia": true
+ },
+ {
+  "n": 22,
+  "hito": "Multimodalidad de 2.ª generación",
+  "fecha": "2026-02-19",
+  "fecha_texto": "feb–mar 2026",
+  "organizacion": "Varias",
+  "aportacion": "Video largo y arquitecturas híbridas",
+  "capitulos": [
+   27,
+   14
+  ],
+  "ideas": [
+   "atencion",
+   "escala"
+  ],
+  "tendencia": true
+ },
+ {
+  "n": 23,
+  "hito": "IA y computación cuántica",
+  "fecha": "2026-07-01",
+  "fecha_texto": "2026",
+  "organizacion": "Varias",
+  "aportacion": "Simulación molecular híbrida, aún sin ventaja práctica",
+  "capitulos": [
+   37
+  ],
+  "ideas": [],
+  "tendencia": true
+ },
+ {
+  "n": 24,
+  "hito": "Astra y las matemáticas",
+  "fecha": "2026-08-01",
+  "fecha_texto": "1 ago 2026",
+  "organizacion": "OpenAI",
+  "aportacion": "Resultados de investigación verificados en Lean 4",
+  "capitulos": [
+   31
+  ],
+  "ideas": [
+   "atencion",
+   "escala",
+   "alineacion",
+   "razonamiento"
+  ],
+  "tendencia": false
+ },
+ {
+  "n": 25,
+  "hito": "GPT-6 Astra",
+  "fecha": "2026-09-03",
+  "fecha_texto": "3 sep 2026",
+  "organizacion": "OpenAI",
+  "aportacion": "Un millón de tokens de contexto y uso de computadoras",
+  "capitulos": [
+   32,
+   33
+  ],
+  "ideas": [
+   "atencion",
+   "escala",
+   "alineacion",
+   "razonamiento"
+  ],
+  "tendencia": false
+ }
+]

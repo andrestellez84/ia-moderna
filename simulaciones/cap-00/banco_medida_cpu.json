@@ -1,0 +1,166 @@
+{
+ "config": {
+  "nombre": "banco-medida-cpu",
+  "dispositivo": "cpu",
+  "tamanos_matmul": [
+   128,
+   256,
+   512,
+   1024,
+   2048
+  ],
+  "precisiones": [
+   "fp32"
+  ],
+  "elementos_copia": [
+   16384,
+   65536,
+   262144,
+   1048576,
+   4194304,
+   16777216,
+   67108864
+  ],
+  "repeticiones": 10,
+  "calentamiento": 3,
+  "semillas": [
+   0,
+   1,
+   2
+  ],
+  "tamanos_ablacion": [
+   512,
+   2048
+  ],
+  "umbral_copia_l2": 4,
+  "bytes_minimos_copia_cpu": 268435456,
+  "presupuesto_vram_gib": 1.0,
+  "reloj_hoja_hz": null,
+  "salida_corridas": "corridas",
+  "salida_datos": "simulaciones/cap-00/banco_medida_cpu.json"
+ },
+ "entorno": {
+  "fecha": "2026-10-06T17:26:54",
+  "sistema": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.0",
+  "git_commit": "70fd12ad5a92555627107017ac37ca22cb68bdbf",
+  "git_cambios_sin_guardar": true,
+  "torch": "2.14.1+cu130",
+  "cuda": "13.0",
+  "cudnn": 92400,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "capacidad": "8.9",
+  "multiprocesadores": 24,
+  "vram_total_bytes": 8585216000,
+  "l2_bytes": 33554432,
+  "controlador": "617.14"
+ },
+ "maquina": {
+  "hilos_cpu": 10
+ },
+ "matmul": [
+  {
+   "precision": "fp32",
+   "n": 128,
+   "tflops": 0.15444215668505448,
+   "tflops_desv": 0.03416446779314206
+  },
+  {
+   "precision": "fp32",
+   "n": 256,
+   "tflops": 0.29732759106997975,
+   "tflops_desv": 0.0073529065412805406
+  },
+  {
+   "precision": "fp32",
+   "n": 512,
+   "tflops": 0.36473684727224914,
+   "tflops_desv": 0.008931717389347064
+  },
+  {
+   "precision": "fp32",
+   "n": 1024,
+   "tflops": 0.37781891735866097,
+   "tflops_desv": 0.007566120583966282
+  },
+  {
+   "precision": "fp32",
+   "n": 2048,
+   "tflops": 0.3802284055624196,
+   "tflops_desv": 0.00156221193469379
+  }
+ ],
+ "copia": [
+  {
+   "n_elementos": 16384,
+   "bytes_movidos": 131072,
+   "gbs": 15.240326809670762,
+   "gbs_desv": 7.280459244160243
+  },
+  {
+   "n_elementos": 65536,
+   "bytes_movidos": 524288,
+   "gbs": 39.50794490728765,
+   "gbs_desv": 15.45397008171074
+  },
+  {
+   "n_elementos": 262144,
+   "bytes_movidos": 2097152,
+   "gbs": 91.62560035082022,
+   "gbs_desv": 22.493504195297216
+  },
+  {
+   "n_elementos": 1048576,
+   "bytes_movidos": 8388608,
+   "gbs": 94.32338150083353,
+   "gbs_desv": 23.99534391367916
+  },
+  {
+   "n_elementos": 4194304,
+   "bytes_movidos": 33554432,
+   "gbs": 84.19351044370973,
+   "gbs_desv": 9.019503571189547
+  },
+  {
+   "n_elementos": 16777216,
+   "bytes_movidos": 134217728,
+   "gbs": 51.10492999926195,
+   "gbs_desv": 4.411163063591529
+  },
+  {
+   "n_elementos": 67108864,
+   "bytes_movidos": 536870912,
+   "gbs": 49.62717166285321,
+   "gbs_desv": 2.8527713014355194
+  }
+ ],
+ "techos": {
+  "fp32_flops": 380228405562.4196,
+  "por_precision_tflops": {
+   "fp32": 0.3802284055624196
+  },
+  "ancho_banda_bytes_s": 49627171662.85321,
+  "umbral_copia_bytes": 268435456
+ },
+ "ablacion": [
+  {
+   "n": 512,
+   "primera_llamada_ms": 3.429100033827126,
+   "protocolo_ms": 0.7645500008948147,
+   "sin_sincronizar_ms": 0.7469499832950532,
+   "protocolo_tflops": 0.35110255141694885,
+   "sin_sincronizar_tflops": 0.3593754093357615
+  },
+  {
+   "n": 2048,
+   "primera_llamada_ms": 47.46060003526509,
+   "protocolo_ms": 45.50135001773015,
+   "sin_sincronizar_ms": 44.72240002360195,
+   "protocolo_tflops": 0.3775683397812517,
+   "sin_sincronizar_tflops": 0.3841446160074915
+  }
+ ],
+ "vram": null,
+ "duracion_s": 6.133369499933906,
+ "carpeta": "C:\\Users\\andre\\Desktop\\Inteligencia Artificial moderna 2017–2026\\corridas\\20261006-172648-banco-medida-cpu"
+}

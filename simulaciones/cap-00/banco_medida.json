@@ -1,0 +1,311 @@
+{
+ "config": {
+  "nombre": "banco-medida",
+  "dispositivo": "cuda",
+  "tamanos_matmul": [
+   128,
+   256,
+   512,
+   1024,
+   2048,
+   4096,
+   8192
+  ],
+  "precisiones": [
+   "fp32",
+   "tf32",
+   "bf16"
+  ],
+  "elementos_copia": [
+   16384,
+   65536,
+   262144,
+   1048576,
+   4194304,
+   16777216,
+   67108864
+  ],
+  "repeticiones": 20,
+  "calentamiento": 5,
+  "semillas": [
+   0,
+   1,
+   2
+  ],
+  "tamanos_ablacion": [
+   1024,
+   4096
+  ],
+  "umbral_copia_l2": 4,
+  "bytes_minimos_copia_cpu": 268435456,
+  "presupuesto_vram_gib": 1.0,
+  "reloj_hoja_hz": 2370000000.0,
+  "salida_corridas": "corridas",
+  "salida_datos": "simulaciones/cap-00/banco_medida.json"
+ },
+ "entorno": {
+  "fecha": "2026-10-06T17:26:08",
+  "sistema": "Windows-10-10.0.26200-SP0",
+  "python": "3.11.0",
+  "git_commit": "70fd12ad5a92555627107017ac37ca22cb68bdbf",
+  "git_cambios_sin_guardar": true,
+  "torch": "2.14.1+cu130",
+  "cuda": "13.0",
+  "cudnn": 92400,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "capacidad": "8.9",
+  "multiprocesadores": 24,
+  "vram_total_bytes": 8585216000,
+  "l2_bytes": 33554432,
+  "controlador": "617.14"
+ },
+ "maquina": {
+  "nucleos_cuda": 3072,
+  "reloj_hoja_hz": 2370000000.0,
+  "reloj_max_hz": 3105000000.0,
+  "l2_bytes": 33554432,
+  "pico_fp32_hoja_flops": 14561280000000.0,
+  "pico_fp32_fmax_flops": 19077120000000.0,
+  "pico_ancho_banda_bytes_s": 256031999999.99997,
+  "bus_bits": 128,
+  "estado_inicial": {
+   "reloj_sm_hz": 1470000000.0,
+   "reloj_mem_hz": 7001000000.0,
+   "limite_potencia_w": 35.81,
+   "limite_potencia_max_w": 45.0,
+   "temperatura_c": 55.0
+  },
+  "carga_antes": {
+   "reloj_sm_hz": 1395000000.0,
+   "reloj_mem_hz": 5501000000.0,
+   "limite_potencia_w": 45.0,
+   "limite_potencia_max_w": 45.0,
+   "temperatura_c": 65.0
+  },
+  "carga_despues": {
+   "reloj_sm_hz": 1365000000.0,
+   "reloj_mem_hz": 5501000000.0,
+   "limite_potencia_w": 45.0,
+   "limite_potencia_max_w": 45.0,
+   "temperatura_c": 71.0
+  },
+  "reloj_carga_hz": 1380000000.0,
+  "reloj_mem_carga_hz": 5501000000.0,
+  "pico_fp32_carga_flops": 8478720000000.0,
+  "pico_ancho_banda_carga_bytes_s": 176032000000.0
+ },
+ "matmul": [
+  {
+   "precision": "fp32",
+   "n": 128,
+   "tflops": 0.09250501931522954,
+   "tflops_desv": 0.05041883296491158
+  },
+  {
+   "precision": "fp32",
+   "n": 256,
+   "tflops": 0.9402937974023055,
+   "tflops_desv": 0.5109020469855146
+  },
+  {
+   "precision": "fp32",
+   "n": 512,
+   "tflops": 3.5704215928900744,
+   "tflops_desv": 0.9706029605997907
+  },
+  {
+   "precision": "fp32",
+   "n": 1024,
+   "tflops": 6.00482117588762,
+   "tflops_desv": 0.3384476907431204
+  },
+  {
+   "precision": "fp32",
+   "n": 2048,
+   "tflops": 6.728714756169083,
+   "tflops_desv": 0.8911978950913945
+  },
+  {
+   "precision": "fp32",
+   "n": 4096,
+   "tflops": 5.3030442723315945,
+   "tflops_desv": 0.04841409802301042
+  },
+  {
+   "precision": "fp32",
+   "n": 8192,
+   "tflops": 5.239927401724309,
+   "tflops_desv": 0.015942029993239556
+  },
+  {
+   "precision": "tf32",
+   "n": 128,
+   "tflops": 0.10756964367603694,
+   "tflops_desv": 0.07481613349398457
+  },
+  {
+   "precision": "tf32",
+   "n": 256,
+   "tflops": 1.471742167076963,
+   "tflops_desv": 0.22450843443230944
+  },
+  {
+   "precision": "tf32",
+   "n": 512,
+   "tflops": 3.786003592541068,
+   "tflops_desv": 0.7707246427768526
+  },
+  {
+   "precision": "tf32",
+   "n": 1024,
+   "tflops": 8.922613269038806,
+   "tflops_desv": 0.6878778260173223
+  },
+  {
+   "precision": "tf32",
+   "n": 2048,
+   "tflops": 10.348061553908133,
+   "tflops_desv": 1.134989718196556
+  },
+  {
+   "precision": "tf32",
+   "n": 4096,
+   "tflops": 10.650819308694313,
+   "tflops_desv": 0.08369777826351407
+  },
+  {
+   "precision": "tf32",
+   "n": 8192,
+   "tflops": 10.059857938136862,
+   "tflops_desv": 0.06922320498089743
+  },
+  {
+   "precision": "bf16",
+   "n": 128,
+   "tflops": 0.05600931275019278,
+   "tflops_desv": 0.01216572309660582
+  },
+  {
+   "precision": "bf16",
+   "n": 256,
+   "tflops": 1.3733401404245784,
+   "tflops_desv": 0.8767577057228314
+  },
+  {
+   "precision": "bf16",
+   "n": 512,
+   "tflops": 4.303548292883261,
+   "tflops_desv": 1.3601300564984966
+  },
+  {
+   "precision": "bf16",
+   "n": 1024,
+   "tflops": 14.439676138189073,
+   "tflops_desv": 0.912272131891304
+  },
+  {
+   "precision": "bf16",
+   "n": 2048,
+   "tflops": 22.187395825911874,
+   "tflops_desv": 0.2706465575574185
+  },
+  {
+   "precision": "bf16",
+   "n": 4096,
+   "tflops": 22.05680690906155,
+   "tflops_desv": 0.5722948767731283
+  },
+  {
+   "precision": "bf16",
+   "n": 8192,
+   "tflops": 21.35515358667317,
+   "tflops_desv": 0.14673376812306435
+  }
+ ],
+ "copia": [
+  {
+   "n_elementos": 16384,
+   "bytes_movidos": 131072,
+   "gbs": 2.40753540463664,
+   "gbs_desv": 0.4575843185108021
+  },
+  {
+   "n_elementos": 65536,
+   "bytes_movidos": 524288,
+   "gbs": 26.366301815676664,
+   "gbs_desv": 14.717557888959037
+  },
+  {
+   "n_elementos": 262144,
+   "bytes_movidos": 2097152,
+   "gbs": 39.623465059045834,
+   "gbs_desv": 7.5818912064521
+  },
+  {
+   "n_elementos": 1048576,
+   "bytes_movidos": 8388608,
+   "gbs": 379.42271422279424,
+   "gbs_desv": 218.742905403999
+  },
+  {
+   "n_elementos": 4194304,
+   "bytes_movidos": 33554432,
+   "gbs": 459.8678921506612,
+   "gbs_desv": 70.6033653457058
+  },
+  {
+   "n_elementos": 16777216,
+   "bytes_movidos": 134217728,
+   "gbs": 151.86472720515917,
+   "gbs_desv": 3.144248333406356
+  },
+  {
+   "n_elementos": 67108864,
+   "bytes_movidos": 536870912,
+   "gbs": 153.81207359220812,
+   "gbs_desv": 0.294592509350155
+  }
+ ],
+ "techos": {
+  "fp32_flops": 6728714756169.083,
+  "por_precision_tflops": {
+   "fp32": 6.728714756169083,
+   "tf32": 10.650819308694313,
+   "bf16": 22.187395825911874
+  },
+  "ancho_banda_bytes_s": 153812073592.20813,
+  "umbral_copia_bytes": 134217728,
+  "fraccion_pico_hoja": 0.4620963786266786,
+  "fraccion_pico_fmax": 0.35271124552181266,
+  "fraccion_pico_carga": 0.7936003024240785,
+  "fraccion_ancho_banda": 0.600753318304775,
+  "fraccion_ancho_banda_carga": 0.8737733684341945
+ },
+ "ablacion": [
+  {
+   "n": 1024,
+   "primera_llamada_ms": 47.00270004104823,
+   "protocolo_ms": 0.4500479996204376,
+   "sin_sincronizar_ms": 0.02010003663599491,
+   "protocolo_tflops": 4.771676909598863,
+   "sin_sincronizar_tflops": 106.83978775214327
+  },
+  {
+   "n": 4096,
+   "primera_llamada_ms": 27.257499983534217,
+   "protocolo_ms": 26.890751838684082,
+   "sin_sincronizar_ms": 0.011649972293525934,
+   "protocolo_tflops": 5.111011930662541,
+   "sin_sincronizar_tflops": 11797.363118912903
+  }
+ ],
+ "vram": {
+  "vram_pico_bytes": 813826048,
+  "vram_pico_gib": 0.7579,
+  "vram_pico_reservado_gib": 0.7695,
+  "vram_limite_gib": 7.0,
+  "vram_cumple": true
+ },
+ "duracion_s": 47.63983170001302,
+ "carpeta": "C:\\Users\\andre\\Desktop\\Inteligencia Artificial moderna 2017–2026\\corridas\\20261006-172520-banco-medida"
+}

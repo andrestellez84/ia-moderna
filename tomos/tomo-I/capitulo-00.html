@@ -1,0 +1,1602 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Capítulo 0. Mapa del libro y entorno de trabajo – Inteligencia Artificial moderna 2017–2026</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../tomos/tomo-I/seccion-0-1.html" rel="next">
+<link href="../../tomos/tomo-I/index.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-cfce082fc06e091338903e7779c04d4a.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-67c745ae80c4bcc9a85fda11a76a596e.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-cfce082fc06e091338903e7779c04d4a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-36be63bef66ac4848298dc6c21dc1f53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-a6f95f7f74362def3d15e55926e33eda.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-36be63bef66ac4848298dc6c21dc1f53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No se han encontrado resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400;1,8..60,600&amp;family=IBM+Plex+Sans+Condensed:wght@400;600&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet">
+<script>
+// Paneles laterales ajustables: el índice (izquierda) y «En esta sección» (derecha).
+// Se pueden ensanchar o estrechar arrastrando su borde (o con las flechas del teclado),
+// restablecer con doble clic, y cerrar o reabrir. El estado se recuerda en este navegador.
+(function () {
+  var CLAVE = "libro:paneles:v1";
+  var DEF = { izq: 260, der: 250, izqAbierto: true, derAbierto: true };
+  var LIM = { izq: [180, 520], der: [180, 480] };
+  var raiz = document.documentElement;
+  var st = Object.assign({}, DEF);
+  try { Object.assign(st, JSON.parse(localStorage.getItem(CLAVE) || "{}")); } catch (e) {}
+
+  function guardar() {
+    try { localStorage.setItem(CLAVE, JSON.stringify(st)); } catch (e) {}
+  }
+  function aplicar() {
+    raiz.style.setProperty("--panel-izq", (st.izqAbierto ? st.izq : 0) + "px");
+    raiz.style.setProperty("--panel-der", (st.derAbierto ? st.der : 0) + "px");
+    raiz.classList.toggle("izq-cerrado", !st.izqAbierto);
+    raiz.classList.toggle("der-cerrado", !st.derAbierto);
+  }
+  function acotar(lado, w) {
+    return Math.round(Math.min(LIM[lado][1], Math.max(LIM[lado][0], w)));
+  }
+  aplicar(); // antes de pintar, para evitar saltos
+
+  document.addEventListener("DOMContentLoaded", function () {
+    var paneles = {
+      izq: document.getElementById("quarto-sidebar"),
+      der: document.getElementById("quarto-margin-sidebar"),
+    };
+    var nombres = { izq: "el índice del libro", der: "el índice de esta página" };
+    var situadores = [];
+
+    function boton(clase, texto, titulo) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = clase;
+      b.textContent = texto;
+      b.title = titulo;
+      b.setAttribute("aria-label", titulo);
+      return b;
+    }
+
+    Object.keys(paneles).forEach(function (lado) {
+      var panel = paneles[lado];
+      if (!panel) { raiz.classList.add("sin-panel-" + lado); return; }
+
+      var tirador = document.createElement("div");
+      tirador.className = "panel-tirador panel-tirador-" + lado;
+      tirador.tabIndex = 0;
+      tirador.setAttribute("role", "separator");
+      tirador.setAttribute("aria-orientation", "vertical");
+      tirador.setAttribute("aria-label", "Ajustar el ancho de " + nombres[lado]);
+      tirador.title = "Arrastre para ajustar el ancho · doble clic para restablecer";
+
+      var cerrar = boton("panel-cerrar", lado === "izq" ? "‹" : "›", "Cerrar " + nombres[lado]);
+      tirador.appendChild(cerrar);
+      document.body.appendChild(tirador);
+
+      var abrir = boton("panel-pestana panel-pestana-" + lado,
+        lado === "izq" ? "Índice" : "En esta página", "Abrir " + nombres[lado]);
+      document.body.appendChild(abrir);
+
+      function situar() {
+        if (!st[lado + "Abierto"]) return;
+        var r = panel.getBoundingClientRect();
+        if (!r.width) return;
+        tirador.style.left = ((lado === "izq" ? r.right : r.left) - 5) + "px";
+      }
+      situadores.push(situar);
+
+      function fijar(w) {
+        st[lado] = acotar(lado, w);
+        aplicar();
+        situadores.forEach(function (f) { f(); });
+      }
+
+      tirador.addEventListener("pointerdown", function (ev) {
+        if (ev.target === cerrar) return;
+        ev.preventDefault();
+        tirador.setPointerCapture(ev.pointerId);
+        tirador.classList.add("arrastrando");
+        raiz.classList.add("paneles-arrastrando");
+        function mover(e) {
+          var r = panel.getBoundingClientRect();
+          fijar(lado === "izq" ? e.clientX - r.left : r.right - e.clientX);
+        }
+        function soltar() {
+          tirador.classList.remove("arrastrando");
+          raiz.classList.remove("paneles-arrastrando");
+          tirador.removeEventListener("pointermove", mover);
+          tirador.removeEventListener("pointerup", soltar);
+          tirador.removeEventListener("pointercancel", soltar);
+          guardar();
+        }
+        tirador.addEventListener("pointermove", mover);
+        tirador.addEventListener("pointerup", soltar);
+        tirador.addEventListener("pointercancel", soltar);
+      });
+
+      tirador.addEventListener("dblclick", function (ev) {
+        if (ev.target === cerrar) return;
+        fijar(DEF[lado]);
+        guardar();
+      });
+
+      tirador.addEventListener("keydown", function (ev) {
+        var paso = ev.shiftKey ? 48 : 16;
+        var signo = { ArrowRight: 1, ArrowLeft: -1 }[ev.key];
+        if (!signo) return;
+        ev.preventDefault();
+        fijar(st[lado] + (lado === "izq" ? signo : -signo) * paso);
+        guardar();
+      });
+
+      cerrar.addEventListener("click", function () {
+        st[lado + "Abierto"] = false;
+        aplicar();
+        guardar();
+        abrir.focus();
+      });
+      abrir.addEventListener("click", function () {
+        st[lado + "Abierto"] = true;
+        aplicar();
+        guardar();
+        requestAnimationFrame(function () { situadores.forEach(function (f) { f(); }); });
+        tirador.focus();
+      });
+
+      if (window.ResizeObserver) new ResizeObserver(situar).observe(panel);
+    });
+
+    function situarTodos() { situadores.forEach(function (f) { f(); }); }
+    window.addEventListener("resize", situarTodos);
+    situarTodos();
+  });
+})();
+</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const queryPrefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const darkModeDefault = queryPrefersDark.matches;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    queryPrefersDark.addEventListener("change", e => {
+      if(window.localStorage.getItem("quarto-color-scheme") !== null)
+        return;
+      const alternate = e.matches
+      toggleColorMode(alternate);
+      localAlternateSentinel = e.matches ? 'alternate' : 'default'; // this is used alongside local storage!
+      toggleGiscusIfUsed(alternate, darkModeDefault);
+    });
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tomos/tomo-I/index.html">Tomo I. Fundamentos matemáticos y computacionales</a></li><li class="breadcrumb-item"><a href="../../tomos/tomo-I/capitulo-00.html"><span class="chapter-title">Capítulo 0. Mapa del libro y entorno de trabajo</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Inteligencia Artificial moderna 2017–2026</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefacio</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../tomos/tomo-I/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Tomo I. Fundamentos matemáticos y computacionales</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tomos/tomo-I/capitulo-00.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">Capítulo 0. Mapa del libro y entorno de trabajo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tomos/tomo-I/seccion-0-1.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">0.1 Cronología verificada 2017–2026</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../tomos/tomo-I/seccion-0-2.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">0.2 El laboratorio en 8 GB</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../proximamente.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lo que viene</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Referencias</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tomos/tomo-I/index.html">Tomo I. Fundamentos matemáticos y computacionales</a></li><li class="breadcrumb-item"><a href="../../tomos/tomo-I/capitulo-00.html"><span class="chapter-title">Capítulo 0. Mapa del libro y entorno de trabajo</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-cap-00" class="quarto-section-identifier"><span class="chapter-title">Capítulo 0. Mapa del libro y entorno de trabajo</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Este capítulo prepara el viaje. No enseña todavía ningún mecanismo de la inteligencia artificial, sino las dos cosas que hacen falta antes de estudiarlos: saber adónde se va y tener con qué trabajar.</p>
+<p>La <a href="seccion-0-1.html">0.1 Cronología verificada 2017–2026</a> es el mapa: los veinticinco hitos de 2017–2026, qué aportó cada uno, cuatro ideas que los conectan y dónde se estudia cada pieza en el libro. La <a href="seccion-0-2.html">0.2 El laboratorio en 8 GB</a> es el laboratorio: qué hay dentro de un ordenador, cómo se instala el software en un portátil con una GPU de 8 GB y cómo se mide el tiempo, la memoria y la velocidad sin engañarse, con una primera práctica que construye los instrumentos de medida de la biblioteca <code>forja</code>.</p>
+<p>Al terminar el capítulo, el lector tendrá una visión de conjunto del campo y un entorno de trabajo comprobado, y sabrá medir lo que ocurre en su GPU.</p>
+<section id="secciones-del-capítulo" class="level2 unnumbered unlisted">
+<h2 class="unnumbered unlisted anchored" data-anchor-id="secciones-del-capítulo">Secciones del capítulo</h2>
+<ul>
+<li><a href="../../tomos/tomo-I/seccion-0-1.html">0.1 Cronología verificada 2017–2026</a></li>
+<li><a href="../../tomos/tomo-I/seccion-0-2.html">0.2 El laboratorio en 8 GB</a></li>
+</ul>
+
+
+</section>
+
+</main> <!-- /main -->
+<script>
+
+// Evaluación de las secciones y bloqueo de las siguientes (herramientas/evaluacion.lua genera
+
+// el HTML de los bancos). El progreso se guarda en el navegador del lector (localStorage): es un
+
+// sistema de honor, no una barrera segura. En el borrador (window.FORJA_BORRADOR) la evaluación
+
+// funciona pero no bloquea nada.
+
+(() => {
+
+  const ALMACEN = "forja.evaluaciones.v1";
+
+  const CLAVE_AUTOR = "a2e69488ca217bd7ea47d2059cdeaa46f27ef987"; // sha1 de la clave del autor
+
+  const borrador = !!window.FORJA_BORRADOR;
+
+
+
+  // --- Estado ---------------------------------------------------------------------------
+
+  const leer = () => {
+
+    try {
+
+      const e = JSON.parse(localStorage.getItem(ALMACEN));
+
+      if (e && e.secciones) return e;
+
+    } catch (_) { /* almacenamiento no disponible */ }
+
+    return {secciones: {}, autor: false};
+
+  };
+
+  const guardar = e => { try { localStorage.setItem(ALMACEN, JSON.stringify(e)); } catch (_) {} };
+
+  const estadoSeccion = (e, id) => (e.secciones[id] ||= {aprobada: false, intentos: 0, retos: 0, ultimo: []});
+
+  const aprobada = (e, id) => e.autor || !!(e.secciones[id] && e.secciones[id].aprobada);
+
+
+
+  // --- SHA-1 (sin depender de crypto.subtle, que exige un contexto seguro) ----------------
+
+  const sha1 = texto => {
+
+    const m = new TextEncoder().encode(texto), l = m.length;
+
+    const n = (((l + 8) >> 6) + 1) * 16, w = new Uint32Array(n);
+
+    for (let i = 0; i < l; i++) w[i >> 2] |= m[i] << (24 - (i % 4) * 8);
+
+    w[l >> 2] |= 0x80 << (24 - (l % 4) * 8);
+
+    w[n - 1] = l * 8;
+
+    let [a, b, c, d, e] = [0x67452301, 0xefcdab89, 0x98badcfe, 0x10325476, 0xc3d2e1f0];
+
+    const r = (x, k) => (x << k) | (x >>> (32 - k)), t = new Uint32Array(80);
+
+    for (let i = 0; i < n; i += 16) {
+
+      for (let j = 0; j < 80; j++) t[j] = j < 16 ? w[i + j] : r(t[j - 3] ^ t[j - 8] ^ t[j - 14] ^ t[j - 16], 1);
+
+      let [A, B, C, D, E] = [a, b, c, d, e];
+
+      for (let j = 0; j < 80; j++) {
+
+        const f = j < 20 ? (B & C) | (~B & D) : j < 40 ? B ^ C ^ D : j < 60 ? (B & C) | (B & D) | (C & D) : B ^ C ^ D;
+
+        const k = j < 20 ? 0x5a827999 : j < 40 ? 0x6ed9eba1 : j < 60 ? 0x8f1bbcdc : 0xca62c1d6;
+
+        const tmp = (r(A, 5) + f + E + k + t[j]) >>> 0;
+
+        [E, D, C, B, A] = [D, C, r(B, 30) >>> 0, A, tmp];
+
+      }
+
+      a = (a + A) >>> 0; b = (b + B) >>> 0; c = (c + C) >>> 0; d = (d + D) >>> 0; e = (e + E) >>> 0;
+
+    }
+
+    return [a, b, c, d, e].map(x => x.toString(16).padStart(8, "0")).join("");
+
+  };
+
+
+
+  const barajar = lista => {
+
+    const x = lista.slice();
+
+    for (let i = x.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [x[i], x[j]] = [x[j], x[i]]; }
+
+    return x;
+
+  };
+
+  const el = (etiqueta, clase, html) => {
+
+    const n = document.createElement(etiqueta);
+
+    if (clase) n.className = clase;
+
+    if (html !== undefined) n.innerHTML = html;
+
+    return n;
+
+  };
+
+  const boton = (texto, f, clase) => { const b = el("button", clase || "ev-boton", texto); b.type = "button"; b.onclick = f; return b; };
+
+  const hoy = () => new Date().toLocaleDateString("es", {day: "numeric", month: "long", year: "numeric"});
+
+
+
+  // --- Clave del autor ------------------------------------------------------------------
+
+  const formularioAutor = () => {
+
+    const d = el("details", "ev-autor");
+
+    d.append(el("summary", "", "¿Es el autor del libro?"));
+
+    const campo = el("input"); campo.type = "password"; campo.placeholder = "clave"; campo.autocomplete = "off";
+
+    const aviso = el("span", "ev-aviso");
+
+    const entrar = () => {
+
+      if (sha1(campo.value.trim()) === CLAVE_AUTOR) {
+
+        const e = leer(); e.autor = true; guardar(e); location.reload();
+
+      } else aviso.textContent = "Clave incorrecta.";
+
+    };
+
+    campo.onkeydown = ev => { if (ev.key === "Enter") entrar(); };
+
+    d.append(campo, boton("Desbloquear todo", entrar), aviso);
+
+    return d;
+
+  };
+
+
+
+  // --- Cortina --------------------------------------------------------------------------
+
+  const cortina = marca => {
+
+    const e = leer();
+
+    const req = marca.dataset.requiere;
+
+    if (!req || borrador || aprobada(e, req)) return;
+
+    const main = document.querySelector("main#quarto-document-content") || document.querySelector("main");
+
+    if (!main) return;
+
+    for (const hijo of [...main.children]) if (hijo.id !== "title-block-header") hijo.classList.add("tras-cortina");
+
+    document.body.classList.add("seccion-bloqueada");
+
+    const c = el("div", "cortina");
+
+    c.append(
+
+      el("p", "cortina-rotulo", "Sección bloqueada"),
+
+      el("p", "", `Esta sección se abre al aprobar la evaluación de la sección <a href="${marca.dataset.requiereHref}">${marca.dataset.requiereTitulo}</a>, con al menos 8 respuestas correctas de 10.`),
+
+      el("p", "", "Lo que se aprende aquí se apoya en lo de allí. La evaluación comprueba que ese terreno está firme antes de seguir construyendo."),
+
+      formularioAutor());
+
+    main.append(c);
+
+  };
+
+
+
+  // Marca en el índice del libro las secciones que el lector aún no puede abrir.
+
+  const marcarIndice = marca => {
+
+    const e = leer();
+
+    if (borrador || e.autor) return;
+
+    const orden = (marca.dataset.orden || "").split(",").filter(Boolean);
+
+    document.querySelectorAll("#quarto-sidebar a[href]").forEach(a => {
+
+      const m = a.getAttribute("href").match(/seccion-(\d+)-(\d+)\.html/);
+
+      if (!m) return;
+
+      const i = orden.indexOf(`${m[1]}.${m[2]}`);
+
+      if (i > 0 && !aprobada(e, orden[i - 1])) a.classList.add("enlace-bloqueado");
+
+    });
+
+  };
+
+
+
+  // --- Evaluación -----------------------------------------------------------------------
+
+  const montar = raiz => {
+
+    const id = raiz.dataset.seccion, sal = raiz.dataset.sal;
+
+    const aprobar = +raiz.dataset.aprobar, n = +raiz.dataset.preguntas, maxIntentos = +raiz.dataset.intentos;
+
+    const banco = [...raiz.querySelectorAll(":scope > .ev-pregunta")];
+
+    const retos = [...raiz.querySelectorAll(":scope > .ev-reto")].sort((a, b) => a.dataset.nivel - b.dataset.nivel);
+
+    const panel = el("div", "ev-panel");
+
+    raiz.append(panel);
+
+    const marca = document.querySelector(".bloqueo-seccion");
+
+    const orden = marca ? (marca.dataset.orden || "").split(",").filter(Boolean) : [];
+
+    const siguiente = orden[orden.indexOf(id) + 1];
+
+
+
+    const correcta = q => [1, 2, 3, 4].find(i => sha1(`${sal}:${q.dataset.id}:${i}`) === q.dataset.clave);
+
+
+
+    // Diez preguntas repartidas entre las sub-secciones, evitando las del intento anterior.
+
+    const sortear = evitar => {
+
+      const porSub = new Map();
+
+      for (const q of barajar(banco)) {
+
+        const s = q.dataset.sub;
+
+        if (!porSub.has(s)) porSub.set(s, []);
+
+        porSub.get(s).push(q);
+
+      }
+
+      for (const [s, l] of porSub) porSub.set(s, [...l.filter(q => !evitar.includes(q.dataset.id)), ...l.filter(q => evitar.includes(q.dataset.id))]);
+
+      const subs = barajar([...porSub.keys()]), elegidas = [];
+
+      for (let ronda = 0; elegidas.length < n; ronda++) {
+
+        let alguna = false;
+
+        for (const s of subs) {
+
+          const l = porSub.get(s);
+
+          if (ronda < l.length && elegidas.length < n) { elegidas.push(l[ronda]); alguna = true; }
+
+        }
+
+        if (!alguna) break;
+
+      }
+
+      const num = s => s.split(".").map(Number);
+
+      return elegidas.sort((a, b) => {
+
+        const [x, y] = [num(a.dataset.sub), num(b.dataset.sub)];
+
+        for (let i = 0; i < Math.max(x.length, y.length); i++) if ((x[i] || 0) !== (y[i] || 0)) return (x[i] || 0) - (y[i] || 0);
+
+        return 0;
+
+      });
+
+    };
+
+
+
+    // Quarto pone el identificador en el bloque <section> de la sub-sección; el título es su
+
+    // primer encabezado (sin el icono del enlace de anclaje).
+
+    const tituloSub = sub => {
+
+      const s = document.getElementById("sec-" + sub.replace(/\./g, "-"));
+
+      const h = s && (s.matches("h1,h2,h3,h4") ? s : s.querySelector("h1,h2,h3,h4"));
+
+      if (!h) return sub;
+
+      const c = h.cloneNode(true);
+
+      c.querySelectorAll(".anchorjs-link").forEach(x => x.remove());
+
+      return c.textContent.trim();
+
+    };
+
+
+
+    const pintarPregunta = (q, k, eleccion) => {
+
+      const caja = el("div", "ev-item");
+
+      caja.dataset.id = q.dataset.id;
+
+      caja.append(el("div", "ev-numero", `Pregunta ${k + 1}`));
+
+      caja.append(q.querySelector(".ev-enunciado").cloneNode(true));
+
+      const opciones = el("div", "ev-lista");
+
+      for (const o of barajar([...q.querySelectorAll(".ev-opcion")])) {
+
+        const fila = el("label", "ev-fila");
+
+        const radio = el("input"); radio.type = "radio"; radio.name = `ev-${id}-${k}`; radio.value = o.dataset.i;
+
+        radio.onchange = () => { eleccion[k] = +o.dataset.i; actualizar(); };
+
+        const texto = el("div", "ev-texto"); texto.append(...[...o.childNodes].map(x => x.cloneNode(true)));
+
+        fila.append(radio, texto);
+
+        fila.dataset.i = o.dataset.i;
+
+        opciones.append(fila);
+
+      }
+
+      caja.append(opciones);
+
+      return caja;
+
+    };
+
+
+
+    let actualizar = () => {};
+
+
+
+    const corregir = (preguntas, eleccion, cajas, practica) => {
+
+      let aciertos = 0;
+
+      const porSub = new Map();
+
+      preguntas.forEach((q, k) => {
+
+        const ok = sha1(`${sal}:${q.dataset.id}:${eleccion[k]}`) === q.dataset.clave;
+
+        if (ok) aciertos++;
+
+        const s = q.dataset.sub;
+
+        const r = porSub.get(s) || {bien: 0, total: 0};
+
+        r.total++; if (ok) r.bien++;
+
+        porSub.set(s, r);
+
+        cajas[k].querySelectorAll("input").forEach(i => { i.disabled = true; });
+
+        cajas[k].dataset.ok = ok ? "1" : "0";
+
+      });
+
+      const e = leer(), st = estadoSeccion(e, id);
+
+      const aprobado = aciertos >= aprobar;
+
+      const mostrarSoluciones = aprobado || st.aprobada || practica || borrador || e.autor;
+
+      if (!practica && !st.aprobada) {
+
+        st.ultimo = preguntas.map(q => q.dataset.id);
+
+        if (aprobado) { st.aprobada = true; st.nota = aciertos; st.fecha = hoy(); }
+
+        else st.intentos++;
+
+        guardar(e);
+
+      }
+
+      if (mostrarSoluciones) {
+
+        preguntas.forEach((q, k) => {
+
+          const c = correcta(q);
+
+          cajas[k].querySelectorAll(".ev-fila").forEach(f => {
+
+            if (+f.dataset.i === c) f.classList.add("ev-correcta");
+
+            else if (+f.dataset.i === eleccion[k]) f.classList.add("ev-erronea");
+
+          });
+
+          const ex = q.querySelector(".ev-explicacion");
+
+          if (ex) { const x = ex.cloneNode(true); x.classList.add("visible"); cajas[k].append(x); }
+
+          cajas[k].classList.add(cajas[k].dataset.ok === "1" ? "ev-bien" : "ev-mal");
+
+        });
+
+      }
+
+      const res = el("div", "ev-resultado");
+
+      if (aprobado) {
+
+        res.append(el("p", "ev-titular", `${aciertos} de ${preguntas.length}: aprobada.`));
+
+        const sig = siguiente ? ` Ya puede abrir la sección siguiente, la ${siguiente}.` : "";
+
+        res.append(el("p", "", practica ? "Examen de práctica: no cambia su progreso." : `Debajo de cada pregunta está la explicación de su respuesta correcta.${sig}`));
+
+      } else {
+
+        res.append(el("p", "ev-titular", `${aciertos} de ${preguntas.length}: hacen falta ${aprobar}.`));
+
+        if (!mostrarSoluciones) {
+
+          const tabla = el("table", "ev-tabla");
+
+          tabla.append(el("tr", "", "<th>Sub-sección</th><th>Aciertos</th>"));
+
+          for (const [s, r] of [...porSub].sort()) {
+
+            const fila = el("tr", r.bien < r.total ? "ev-flojo" : "");
+
+            fila.append(el("td", "", `<a href="#sec-${s.replace(/\./g, "-")}">${tituloSub(s)}</a>`), el("td", "", `${r.bien} de ${r.total}`));
+
+            tabla.append(fila);
+
+          }
+
+          res.append(el("p", "", "Las respuestas correctas se muestran al aprobar. Esto es lo que conviene repasar:"), tabla);
+
+          const quedan = maxIntentos - st.intentos;
+
+          res.append(el("p", "", quedan > 0
+
+            ? `Le ${quedan === 1 ? "queda 1 intento" : `quedan ${quedan} intentos`} antes de que cada intento nuevo exija superar un reto.`
+
+            : "Para el próximo intento tendrá que superar antes un reto: un problema de respuesta abierta, más difícil cada vez."));
+
+        }
+
+      }
+
+      res.append(boton("Continuar", () => vista()));
+
+      panel.prepend(res);
+
+      panel.scrollIntoView({behavior: "smooth", block: "start"});
+
+    };
+
+
+
+    const examen = practica => {
+
+      const e = leer(), st = estadoSeccion(e, id);
+
+      const preguntas = sortear(st.ultimo || []);
+
+      const eleccion = Array(preguntas.length).fill(null);
+
+      panel.innerHTML = "";
+
+      const cajas = preguntas.map((q, k) => pintarPregunta(q, k, eleccion));
+
+      const enviar = boton("Corregir", () => { enviar.disabled = true; corregir(preguntas, eleccion, cajas, practica); });
+
+      enviar.disabled = true;
+
+      const falta = el("span", "ev-aviso");
+
+      actualizar = () => {
+
+        const sin = eleccion.filter(x => x === null).length;
+
+        enviar.disabled = sin > 0;
+
+        falta.textContent = sin ? `Faltan ${sin} por responder.` : "";
+
+      };
+
+      actualizar();
+
+      panel.append(el("p", "ev-cabecera", practica ? "Examen de práctica: no cambia su progreso." :
+
+        `Intento ${st.intentos + 1}. Elija una opción en cada pregunta y pulse «Corregir».`), ...cajas, enviar, falta);
+
+    };
+
+
+
+    const reto = (k, st) => {
+
+      const r = retos[Math.min(k, retos.length - 1)];
+
+      panel.innerHTML = "";
+
+      panel.append(el("p", "ev-cabecera", `Reto ${k + 1}. Para un nuevo intento, resuelva antes este problema. Escriba solo la respuesta.`));
+
+      panel.append(r.querySelector(".ev-enunciado").cloneNode(true));
+
+      const original = r.querySelector(".ev-pista");
+
+      const pista = original ? original.cloneNode(true) : null;
+
+      const campo = el("input", "ev-campo"); campo.type = "text";
+
+      const aviso = el("span", "ev-aviso");
+
+      const comprobar = () => {
+
+        let v = campo.value.trim();
+
+        if (r.dataset.formato === "numero") {
+
+          const x = Number(v.replace(",", "."));
+
+          if (!isFinite(x)) { aviso.textContent = "Escriba un número."; return; }
+
+          v = x.toFixed(+r.dataset.decimales);
+
+        } else v = v.replace(/\s/g, "").toLowerCase();
+
+        if (sha1(`${sal}:${r.dataset.id}:${v}`) === r.dataset.clave) {
+
+          const e = leer(); estadoSeccion(e, id).retos++; guardar(e); vista();
+
+        } else {
+
+          aviso.textContent = "No es correcto. Revise la sección y vuelva a intentarlo.";
+
+          if (pista) pista.classList.add("visible");
+
+        }
+
+      };
+
+      campo.onkeydown = ev => { if (ev.key === "Enter") comprobar(); };
+
+      const fila = el("div", "ev-reto-fila"); fila.append(campo, boton("Comprobar", comprobar), aviso);
+
+      panel.append(fila);
+
+      if (pista) panel.append(pista);
+
+    };
+
+
+
+    const vista = () => {
+
+      const e = leer(), st = estadoSeccion(e, id);
+
+      panel.innerHTML = "";
+
+      if (st.aprobada) {
+
+        panel.append(el("p", "ev-titular", `Sección aprobada${st.fecha ? ` el ${st.fecha}` : ""}${st.nota ? `, con ${st.nota} de ${n}` : ""}.`));
+
+        panel.append(el("p", "", "Puede hacer exámenes de práctica, que no cambian su progreso y muestran las soluciones al corregir."));
+
+        panel.append(boton("Examen de práctica", () => examen(true)));
+
+      } else {
+
+        const extra = st.intentos - maxIntentos;           // intentos ya hechos por encima de los gratuitos
+
+        if (extra >= 0 && st.retos <= extra && retos.length) { reto(st.retos, st); return; }
+
+        panel.append(el("p", "", `Diez preguntas de selección múltiple sobre toda la sección. Para aprobar hacen falta ${aprobar} respuestas correctas.
+
+          Tiene ${maxIntentos} intentos; a partir del cuarto, cada intento exige superar antes un reto. Las respuestas correctas se muestran al aprobar.`));
+
+        if (st.intentos) panel.append(el("p", "ev-aviso", `Intentos hechos: ${st.intentos}.`));
+
+        panel.append(boton("Empezar la evaluación", () => examen(false)));
+
+      }
+
+      if (borrador || e.autor) {
+
+        panel.append(el("p", "ev-aviso", borrador ? "Borrador: la evaluación funciona, pero no bloquea ninguna sección." : "Modo autor: todas las secciones están abiertas."));
+
+        panel.append(boton("Reiniciar mi progreso en esta sección", () => { const x = leer(); delete x.secciones[id]; guardar(x); vista(); }, "ev-boton ev-secundario"));
+
+      }
+
+      // La clave del autor también se puede escribir aquí, aunque ninguna sección esté bloqueada.
+
+      if (e.autor) panel.append(boton("Salir del modo autor", () => { const x = leer(); x.autor = false; guardar(x); location.reload(); }, "ev-boton ev-secundario"));
+
+      else if (!borrador) panel.append(formularioAutor());
+
+    };
+
+    vista();
+
+  };
+
+
+
+  document.addEventListener("DOMContentLoaded", () => {
+
+    const marca = document.querySelector(".bloqueo-seccion");
+
+    if (marca) { cortina(marca); marcarIndice(marca); }
+
+    document.querySelectorAll(".evaluacion").forEach(montar);
+
+  });
+
+})();
+
+</script>
+
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copiado");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copiado");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../tomos/tomo-I/index.html" class="pagination-link" aria-label="Tomo I. Fundamentos matemáticos y computacionales">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Tomo I. Fundamentos matemáticos y computacionales</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../tomos/tomo-I/seccion-0-1.html" class="pagination-link" aria-label="0.1 Cronología verificada 2017–2026">
+        <span class="nav-page-text"><span class="chapter-title">0.1 Cronología verificada 2017–2026</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
+</body></html>

@@ -49,9 +49,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-cfce082fc06e091338903e7779c04d4a.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-36be63bef66ac4848298dc6c21dc1f53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-a6f95f7f74362def3d15e55926e33eda.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-36be63bef66ac4848298dc6c21dc1f53.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fa6d95d49156be69eb345875da086203.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-2db502a5658ac5af51b28b677c3e6a41.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-fa6d95d49156be69eb345875da086203.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -525,7 +525,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>El libro se publica por entregas, en el mismo orden en que se estudia. Esto es lo que queda por delante, visto desde lejos.</p>
-<p><span class="avance">2 de 137 secciones publicadas</span></p>
+<p><span class="avance">2 de 140 secciones publicadas</span></p>
 <section id="tomo-i.-fundamentos-matemáticos-y-computacionales" class="level2">
 <h2 class="anchored" data-anchor-id="tomo-i.-fundamentos-matemáticos-y-computacionales">Tomo I. Fundamentos matemáticos y computacionales</h2>
 <p>El lenguaje común. Las matemáticas que mueven el aprendizaje automático, la máquina en que todo se ejecuta y las primeras redes neuronales, programadas desde cero.</p>
@@ -572,6 +572,18 @@ ul.task-list li input[type="checkbox"] {
 
 // funciona pero no bloquea nada.
 
+//
+
+// Además del examen: cada respuesta lleva un grado de seguridad (para el informe de calibración),
+
+// cada examen añade dos preguntas de repaso de secciones anteriores que no cuentan para aprobar,
+
+// la sección puede ofrecer una comprobación de la práctica con la semilla personal del lector y un
+
+// prompt para un examen oral con cualquier IA, y las cajas «Antes de tocar» de las simulaciones
+
+// piden una predicción antes de mostrar lo que pasa.
+
 (() => {
 
   const ALMACEN = "forja.evaluaciones.v1";
@@ -605,6 +617,18 @@ ul.task-list li input[type="checkbox"] {
   const estadoSeccion = (e, id) => (e.secciones[id] ||= {aprobada: false, intentos: 0, retos: 0, ultimo: []});
 
   const aprobada = (e, id) => e.autor || !!(e.secciones[id] && e.secciones[id].aprobada);
+
+  // Semilla personal: un número de cuatro cifras que el lector usa en los programas de comprobación.
+
+  const semilla = () => {
+
+    const e = leer();
+
+    if (!e.semilla) { e.semilla = 1000 + Math.floor(Math.random() * 9000); guardar(e); }
+
+    return e.semilla;
+
+  };
 
 
 
@@ -776,6 +800,198 @@ ul.task-list li input[type="checkbox"] {
 
 
 
+  // --- Comprobación de la práctica con la semilla personal ------------------------------
+
+  const montarLaboratorio = raiz => {
+
+    const labs = [...raiz.querySelectorAll(":scope > .ev-laboratorio")];
+
+    if (!labs.length) return;
+
+    const caja = el("div", "ev-panel ev-lab-panel");
+
+    caja.append(el("p", "ev-cabecera", "Comprobación en su máquina"));
+
+    caja.append(el("p", "", `Su semilla personal es <b>${semilla()}</b>. Ejecute el programa con ella y escriba el número que imprime. La página hace la misma cuenta y comprueba que coinciden: la única forma de obtenerlo es ejecutar el código.`));
+
+    for (const l of labs) {
+
+      const item = el("div", "ev-item");
+
+      item.append(l.querySelector(".ev-enunciado").cloneNode(true));
+
+      const orden = el("pre", "ev-orden"); orden.textContent = l.dataset.orden.replace("{semilla}", semilla());
+
+      const campo = el("input", "ev-campo"); campo.type = "text"; campo.inputMode = "numeric";
+
+      const aviso = el("span", "ev-aviso");
+
+      const clave = `lab:${raiz.dataset.seccion}:${l.dataset.id}`;
+
+      const hecho = () => { const e = leer(); return !!(e.laboratorio && e.laboratorio[clave]); };
+
+      const comprobar = () => {
+
+        let esperado;
+
+        try { esperado = new Function(`return (${l.dataset.calculo.trim()})`)()(semilla()); }
+
+        catch (err) { aviso.textContent = "Error en el cálculo de la página."; return; }
+
+        if (String(campo.value).trim() === String(esperado)) {
+
+          const e = leer(); (e.laboratorio ||= {})[clave] = hoy(); guardar(e);
+
+          aviso.textContent = "Coincide: su práctica funciona en su máquina.";
+
+          item.classList.add("ev-bien");
+
+        } else aviso.textContent = "No coincide. Compruebe que usó su semilla y el programa sin cambios.";
+
+      };
+
+      campo.onkeydown = ev => { if (ev.key === "Enter") comprobar(); };
+
+      const fila = el("div", "ev-reto-fila"); fila.append(campo, boton("Comprobar", comprobar), aviso);
+
+      item.append(orden, fila);
+
+      if (hecho()) { item.classList.add("ev-bien"); aviso.textContent = "Ya comprobado en su máquina."; }
+
+      caja.append(item);
+
+    }
+
+    raiz.append(caja);
+
+  };
+
+
+
+  // --- Examen oral con una IA -------------------------------------------------------------
+
+  const montarExaminador = raiz => {
+
+    const ex = raiz.querySelector(":scope > .ev-examinador");
+
+    if (!ex) return;
+
+    const texto = ex.querySelector("pre, code").textContent;
+
+    const d = el("details", "ev-panel ev-examinador-panel");
+
+    d.append(el("summary", "ev-cabecera", "Examen oral con una IA"));
+
+    d.append(el("p", "", "El examen de selección múltiple se puede responder con ayuda de una IA; un examen oral, no. Copie este texto, péguelo en cualquier asistente de IA (ChatGPT, Claude, Gemini…) y responda sus preguntas sin mirar el libro. El asistente actuará como examinador: no le dará las respuestas, le pedirá ejemplos propios y, al final, le dirá qué ideas domina y cuáles repasar."));
+
+    const pre = el("pre", "ev-prompt"); pre.textContent = texto;
+
+    const aviso = el("span", "ev-aviso");
+
+    const copiar = boton("Copiar el texto", async () => {
+
+      try { await navigator.clipboard.writeText(texto); aviso.textContent = "Copiado."; }
+
+      catch (_) {
+
+        const r = document.createRange(); r.selectNodeContents(pre);
+
+        const s = getSelection(); s.removeAllRanges(); s.addRange(r);
+
+        aviso.textContent = "Seleccionado: cópielo con Ctrl+C.";
+
+      }
+
+    });
+
+    d.append(pre, copiar, aviso);
+
+    raiz.append(d);
+
+  };
+
+
+
+  // --- «Antes de tocar»: predicciones en las simulaciones ---------------------------------
+
+  const PREDICCIONES = "forja.predicciones.v1";
+
+  const montarPrediccion = (caja, n) => {
+
+    const clave = `${location.pathname}#${caja.id || n}`;
+
+    const leerP = () => { try { return JSON.parse(localStorage.getItem(PREDICCIONES)) || {}; } catch (_) { return {}; } };
+
+    const guardarP = x => { try { localStorage.setItem(PREDICCIONES, JSON.stringify(x)); } catch (_) {} };
+
+    const lista = caja.querySelector("ul, ol");
+
+    const revelacion = caja.querySelector(".revelacion");
+
+    if (!lista || !revelacion) return;
+
+    const opciones = [...lista.children];
+
+    const botones = el("div", "pred-opciones");
+
+    const pie = el("div", "pred-pie");
+
+    const pintar = () => {
+
+      const st = leerP()[clave] || {};
+
+      botones.querySelectorAll("button").forEach((b, i) => b.classList.toggle("pred-elegida", st.eleccion === i));
+
+      pie.innerHTML = "";
+
+      revelacion.classList.toggle("visible", !!st.comprobado);
+
+      if (st.eleccion === undefined) { pie.append(el("span", "ev-aviso", "Elija una opción antes de tocar la simulación.")); return; }
+
+      if (!st.comprobado) {
+
+        pie.append(el("span", "ev-aviso", "Ahora compruébelo con la simulación."),
+
+          boton("Ya lo comprobé", () => { const x = leerP(); x[clave].comprobado = true; guardarP(x); pintar(); }, "ev-boton ev-secundario"));
+
+        return;
+
+      }
+
+      if (st.acerto === undefined) {
+
+        pie.append(el("span", "ev-aviso", "¿Acertó su predicción?"),
+
+          boton("Sí", () => { const x = leerP(); x[clave].acerto = true; guardarP(x); pintar(); }, "ev-boton ev-secundario"),
+
+          boton("No", () => { const x = leerP(); x[clave].acerto = false; guardarP(x); pintar(); }, "ev-boton ev-secundario"));
+
+      } else pie.append(el("span", "ev-aviso", st.acerto ? "Predicción acertada." : "Predicción fallida: lo más valioso de la simulación es entender por qué."));
+
+    };
+
+    opciones.forEach((li, i) => {
+
+      const b = el("button", "pred-opcion"); b.type = "button";
+
+      b.append(...[...li.childNodes].map(x => x.cloneNode(true)));
+
+      b.onclick = () => { const x = leerP(); x[clave] = {eleccion: i}; guardarP(x); pintar(); };
+
+      botones.append(b);
+
+    });
+
+    lista.replaceWith(botones);
+
+    botones.after(pie);
+
+    pintar();
+
+  };
+
+
+
   // --- Evaluación -----------------------------------------------------------------------
 
   const montar = raiz => {
@@ -788,9 +1004,15 @@ ul.task-list li input[type="checkbox"] {
 
     const retos = [...raiz.querySelectorAll(":scope > .ev-reto")].sort((a, b) => a.dataset.nivel - b.dataset.nivel);
 
+    const repasos = [...raiz.querySelectorAll(":scope > .ev-repaso")];
+
     const panel = el("div", "ev-panel");
 
     raiz.append(panel);
+
+    montarLaboratorio(raiz);
+
+    montarExaminador(raiz);
 
     const marca = document.querySelector(".bloqueo-seccion");
 
@@ -800,7 +1022,9 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-    const correcta = q => [1, 2, 3, 4].find(i => sha1(`${sal}:${q.dataset.id}:${i}`) === q.dataset.clave);
+    const salDe = q => q.dataset.sal || sal;
+
+    const correcta = q => [1, 2, 3, 4].find(i => sha1(`${salDe(q)}:${q.dataset.id}:${i}`) === q.dataset.clave);
 
 
 
@@ -878,13 +1102,19 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-    const pintarPregunta = (q, k, eleccion) => {
+    const NIVELES_SEGURIDAD = [["seguro", "Seguro"], ["dudo", "Dudo"], ["adivino", "Adivino"]];
+
+    const pintarPregunta = (q, k, eleccion, seguridad) => {
 
       const caja = el("div", "ev-item");
 
       caja.dataset.id = q.dataset.id;
 
-      caja.append(el("div", "ev-numero", `Pregunta ${k + 1}`));
+      const rep = q.classList.contains("ev-repaso");
+
+      caja.append(el("div", "ev-numero", rep ? `Repaso de la sección ${q.dataset.seccion} · no cuenta para aprobar` : `Pregunta ${k + 1}`));
+
+      if (rep) caja.classList.add("ev-item-repaso");
 
       caja.append(q.querySelector(".ev-enunciado").cloneNode(true));
 
@@ -910,6 +1140,28 @@ ul.task-list li input[type="checkbox"] {
 
       caja.append(opciones);
 
+      // ¿Qué tan seguro está? No cambia la nota: alimenta el informe de calibración.
+
+      const seg = el("div", "ev-seguridad");
+
+      seg.append(el("span", "", "¿Qué tan seguro está?"));
+
+      for (const [valor, rotulo] of NIVELES_SEGURIDAD) {
+
+        const b = el("label", "ev-seg-opcion");
+
+        const r = el("input"); r.type = "radio"; r.name = `ev-seg-${id}-${k}`; r.value = valor;
+
+        r.onchange = () => { seguridad[k] = valor; };
+
+        b.append(r, document.createTextNode(" " + rotulo));
+
+        seg.append(b);
+
+      }
+
+      caja.append(seg);
+
       return caja;
 
     };
@@ -920,15 +1172,57 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-    const corregir = (preguntas, eleccion, cajas, practica) => {
+    const corregir = (todas, eleccion, cajas, practica, seguridad) => {
 
       let aciertos = 0;
 
-      const porSub = new Map();
+      const porSub = new Map(), calibracion = new Map();
 
-      preguntas.forEach((q, k) => {
+      const principales = todas.filter(q => !q.classList.contains("ev-repaso"));
+
+      // Repaso: se corrige y se explica siempre, porque sus secciones ya están aprobadas.
+
+      todas.forEach((q, k) => {
+
+        if (!q.classList.contains("ev-repaso")) return;
+
+        const c = correcta(q);
+
+        cajas[k].querySelectorAll("input").forEach(i => { i.disabled = true; });
+
+        cajas[k].querySelectorAll(".ev-fila").forEach(f => {
+
+          if (+f.dataset.i === c) f.classList.add("ev-correcta");
+
+          else if (+f.dataset.i === eleccion[k]) f.classList.add("ev-erronea");
+
+        });
+
+        const ex = q.querySelector(".ev-explicacion");
+
+        if (ex) { const x = ex.cloneNode(true); x.classList.add("visible"); cajas[k].append(x); }
+
+      });
+
+      const preguntas = principales;
+
+      const indices = todas.map((q, k) => k).filter(k => !todas[k].classList.contains("ev-repaso"));
+
+      preguntas.forEach((q, j) => {
+
+        const k = indices[j];
 
         const ok = sha1(`${sal}:${q.dataset.id}:${eleccion[k]}`) === q.dataset.clave;
+
+        if (seguridad[k]) {
+
+          const c = calibracion.get(seguridad[k]) || {bien: 0, total: 0};
+
+          c.total++; if (ok) c.bien++;
+
+          calibracion.set(seguridad[k], c);
+
+        }
 
         if (ok) aciertos++;
 
@@ -945,6 +1239,10 @@ ul.task-list li input[type="checkbox"] {
         cajas[k].dataset.ok = ok ? "1" : "0";
 
       });
+
+      const repasoBien = todas.filter((q, k) => q.classList.contains("ev-repaso") && correcta(q) === eleccion[k]).length;
+
+      const repasoTotal = todas.length - preguntas.length;
 
       const e = leer(), st = estadoSeccion(e, id);
 
@@ -966,7 +1264,9 @@ ul.task-list li input[type="checkbox"] {
 
       if (mostrarSoluciones) {
 
-        preguntas.forEach((q, k) => {
+        preguntas.forEach((q, j) => {
+
+          const k = indices[j];
 
           const c = correcta(q);
 
@@ -1032,6 +1332,36 @@ ul.task-list li input[type="checkbox"] {
 
       }
 
+      // Calibración: ¿acierta cuando dice estar seguro? Solo cuenta las preguntas de la sección.
+
+      if (calibracion.size) {
+
+        const frases = NIVELES_SEGURIDAD.filter(([v]) => calibracion.has(v)).map(([v, r]) => {
+
+          const c = calibracion.get(v);
+
+          return `${r.toLowerCase()}: ${c.bien} de ${c.total}`;
+
+        });
+
+        const seguro = calibracion.get("seguro");
+
+        let lectura = "";
+
+        if (seguro && seguro.total >= 2 && seguro.bien / seguro.total < 0.75)
+
+          lectura = " Cuando se sintió seguro falló más de lo que esperaba: vale la pena releer esas partes con calma.";
+
+        else if (seguro && seguro.bien === seguro.total)
+
+          lectura = " Cuando se sintió seguro, acertó siempre: su confianza está bien calibrada.";
+
+        res.append(el("p", "ev-calibracion", `Aciertos según su seguridad: ${frases.join("; ")}.${lectura}`));
+
+      }
+
+      if (repasoTotal) res.append(el("p", "ev-aviso", `Repaso de secciones anteriores: ${repasoBien} de ${repasoTotal} (no cuenta para aprobar).`));
+
       res.append(boton("Continuar", () => vista()));
 
       panel.prepend(res);
@@ -1046,15 +1376,17 @@ ul.task-list li input[type="checkbox"] {
 
       const e = leer(), st = estadoSeccion(e, id);
 
-      const preguntas = sortear(st.ultimo || []);
+      const preguntas = [...sortear(st.ultimo || []), ...barajar(repasos).slice(0, 2)];
 
       const eleccion = Array(preguntas.length).fill(null);
 
+      const seguridad = Array(preguntas.length).fill(null);
+
       panel.innerHTML = "";
 
-      const cajas = preguntas.map((q, k) => pintarPregunta(q, k, eleccion));
+      const cajas = preguntas.map((q, k) => pintarPregunta(q, k, eleccion, seguridad));
 
-      const enviar = boton("Corregir", () => { enviar.disabled = true; corregir(preguntas, eleccion, cajas, practica); });
+      const enviar = boton("Corregir", () => { enviar.disabled = true; corregir(preguntas, eleccion, cajas, practica, seguridad); });
 
       enviar.disabled = true;
 
@@ -1062,7 +1394,7 @@ ul.task-list li input[type="checkbox"] {
 
       actualizar = () => {
 
-        const sin = eleccion.filter(x => x === null).length;
+        const sin = eleccion.filter((x, k) => x === null && !preguntas[k].classList.contains("ev-repaso")).length;
 
         enviar.disabled = sin > 0;
 
@@ -1197,6 +1529,8 @@ ul.task-list li input[type="checkbox"] {
     if (marca) { cortina(marca); marcarIndice(marca); }
 
     document.querySelectorAll(".evaluacion").forEach(montar);
+
+    document.querySelectorAll(".prediccion").forEach(montarPrediccion);
 
   });
 

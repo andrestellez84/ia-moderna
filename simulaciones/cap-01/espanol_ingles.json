@@ -1,0 +1,5257 @@
+{
+ "fuentes": {
+  "glove-es": {
+   "descripcion": "GloVe, Spanish Billion Words Corpus (Jorge Pérez)",
+   "licencia": "CC BY 4.0",
+   "url": "https://users.dcc.uchile.cl/~jperez/word-embeddings/glove-sbwc.i25.vec.gz"
+  },
+  "fasttext-es": {
+   "descripcion": "fastText, Wikipedia en español, alineado con el inglés",
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://dl.fbaipublicfiles.com/fasttext/vectors-aligned/wiki.es.align.vec"
+  },
+  "fasttext-en": {
+   "descripcion": "fastText, Wikipedia en inglés, alineado con el español",
+   "licencia": "CC BY-SA 3.0",
+   "url": "https://dl.fbaipublicfiles.com/fasttext/vectors-aligned/wiki.en.align.vec"
+  }
+ },
+ "vocabulario": 100000,
+ "cobertura": {
+  "glove-es": {
+   "20000": 314,
+   "50000": 422,
+   "100000": 463
+  },
+  "fasttext-es": {
+   "20000": 313,
+   "50000": 420,
+   "100000": 460
+  },
+  "fasttext-en": {
+   "20000": 350,
+   "50000": 450,
+   "100000": 478
+  }
+ },
+ "pares_comunes": 448,
+ "spearman_propio": {
+  "glove-es": 0.66,
+  "fasttext-es": 0.732,
+  "fasttext-en": 0.685
+ },
+ "cubiertos_propio": {
+  "glove-es": 463,
+  "fasttext-es": 460,
+  "fasttext-en": 478
+ },
+ "spearman_comun": {
+  "glove-es": 0.672,
+  "fasttext-es": 0.736,
+  "fasttext-en": 0.697
+ },
+ "intervalos_95": {
+  "glove-es": [
+   0.61,
+   0.725
+  ],
+  "fasttext-es": [
+   0.689,
+   0.777
+  ],
+  "fasttext-en": [
+   0.639,
+   0.748
+  ],
+  "fasttext-es menos fasttext-en": [
+   -0.005,
+   0.089
+  ],
+  "fasttext-es menos glove-es": [
+   0.023,
+   0.109
+  ]
+ },
+ "humanos_es_en": 0.95,
+ "cruzado": {
+  "fasttext-es con personas en": 0.71,
+  "fasttext-en con personas es": 0.708
+ },
+ "errores": {
+  "glove-es": [
+   {
+    "a": "gusano de seda",
+    "b": "Ruta de la Seda",
+    "humanos": 1.0,
+    "coseno": 0.818,
+    "modelo_mas_alto": true
+   },
+   {
+    "a": "camisa",
+    "b": "rebeca",
+    "humanos": 2.92,
+    "coseno": 0.072,
+    "modelo_mas_alto": false
+   },
+   {
+    "a": "manuscrito",
+    "b": "artículo",
+    "humanos": 3.42,
+    "coseno": 0.191,
+    "modelo_mas_alto": false
+   },
+   {
+    "a": "esclerosis múltiple",
+    "b": "EM",
+    "humanos": 4.0,
+    "coseno": 0.23,
+    "modelo_mas_alto": false
+   },
+   {
+    "a": "computación en la nube",
+    "b": "lluvia",
+    "humanos": 0.0,
+    "coseno": 0.439,
+    "modelo_mas_alto": true
+   },
+   {
+    "a": "puesta de sol",
+    "b": "mesa",
+    "humanos": 0.0,
+    "coseno": 0.493,
+    "modelo_mas_alto": true
+   }
+  ],
+  "fasttext-es": [
+   {
+    "a": "cola",
+    "b": "retaguardia",
+    "humanos": 3.0,
+    "coseno": 0.118,
+    "modelo_mas_alto": false
+   },
+   {
+    "a": "gusano de seda",
+    "b": "Ruta de la Seda",
+    "humanos": 1.0,
+    "coseno": 0.812,
+    "modelo_mas_alto": true
+   },
+   {
+    "a": "matriz",
+    "b": "lista",
+    "humanos": 2.83,
+    "coseno": 0.111,
+    "modelo_mas_alto": false
+   },
+   {
+    "a": "esclerosis múltiple",
+    "b": "EM",
+    "humanos": 4.0,
+    "coseno": 0.294,
+    "modelo_mas_alto": false
+   },
+   {
+    "a": "computación en la nube",
+    "b": "lluvia",
+    "humanos": 0.0,
+    "coseno": 0.414,
+    "modelo_mas_alto": true
+   },
+   {
+    "a": "ecuador",
+    "b": "Ecuador",
+    "humanos": 1.58,
+    "coseno": 1.0,
+    "modelo_mas_alto": true
+   }
+  ],
+  "fasttext-en": [
+   {
+    "a": "Western world",
+    "b": "Western Union",
+    "humanos": 0.42,
+    "coseno": 0.688,
+    "modelo_mas_alto": true
+   },
+   {
+    "a": "queen regnant",
+    "b": "chess queen",
+    "humanos": 0.92,
+    "coseno": 0.714,
+    "modelo_mas_alto": true
+   },
+   {
+    "a": "manuscript",
+    "b": "article",
+    "humanos": 3.5,
+    "coseno": 0.226,
+    "modelo_mas_alto": false
+   },
+   {
+    "a": "semester",
+    "b": "term",
+    "humanos": 3.83,
+    "coseno": 0.256,
+    "modelo_mas_alto": false
+   },
+   {
+    "a": "wallpaper",
+    "b": "background",
+    "humanos": 3.42,
+    "coseno": 0.215,
+    "modelo_mas_alto": false
+   },
+   {
+    "a": "woodland",
+    "b": "Tiger Woods",
+    "humanos": 0.08,
+    "coseno": 0.508,
+    "modelo_mas_alto": true
+   }
+  ]
+ },
+ "traduccion": {
+  "palabras": 1495,
+  "precision_1": 0.855,
+  "precision_5": 0.946,
+  "ejemplos": [
+   {
+    "es": "modernas",
+    "en": [
+     "modern",
+     "newer",
+     "sophisticated"
+    ],
+    "correctas": [
+     "modern"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "celebrar",
+    "en": [
+     "celebrate",
+     "celebration",
+     "celebrating"
+    ],
+    "correctas": [
+     "celebrate"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "simultáneamente",
+    "en": [
+     "simultaneously",
+     "simultaneous",
+     "both"
+    ],
+    "correctas": [
+     "simultaneous",
+     "simultaneously"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "intelectuales",
+    "en": [
+     "intellectuals",
+     "thinkers",
+     "intelligentsia"
+    ],
+    "correctas": [
+     "intellectual",
+     "intellectuals",
+     "intelligentsia"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "alcaldía",
+    "en": [
+     "mayor",
+     "mayoralty",
+     "mayoral"
+    ],
+    "correctas": [
+     "mayor",
+     "mayoral"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "macho",
+    "en": [
+     "mating",
+     "copulation",
+     "brood"
+    ],
+    "correctas": [
+     "macho",
+     "male"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "alumno",
+    "en": [
+     "pupil",
+     "teacher",
+     "student"
+    ],
+    "correctas": [
+     "learner",
+     "pupil",
+     "student"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "steven",
+    "en": [
+     "steven",
+     "spielberg",
+     "steve"
+    ],
+    "correctas": [
+     "steven"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "reemplazo",
+    "en": [
+     "replacement",
+     "replacing",
+     "replace"
+    ],
+    "correctas": [
+     "replace",
+     "replacement"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "décimo",
+    "en": [
+     "tenth",
+     "fifth",
+     "sixth"
+    ],
+    "correctas": [
+     "tenth"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "setenta",
+    "en": [
+     "seventies",
+     "eighty",
+     "sixty"
+    ],
+    "correctas": [
+     "seventies",
+     "seventy"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "clasificaciones",
+    "en": [
+     "classifications",
+     "classification",
+     "reclassification"
+    ],
+    "correctas": [
+     "classifications",
+     "rankings",
+     "ratings"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "bach",
+    "en": [
+     "bach",
+     "cantatas",
+     "pachelbel"
+    ],
+    "correctas": [
+     "bach"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "viña",
+    "en": [
+     "viña",
+     "vineyard",
+     "winery"
+    ],
+    "correctas": [
+     "vine",
+     "vineyard",
+     "viña"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "capas",
+    "en": [
+     "layers",
+     "layer",
+     "layered"
+    ],
+    "correctas": [
+     "capes",
+     "layer",
+     "layered"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "interacción",
+    "en": [
+     "interaction",
+     "interactions",
+     "interacting"
+    ],
+    "correctas": [
+     "engagement",
+     "interaction",
+     "interactions"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "murray",
+    "en": [
+     "murray",
+     "fraser",
+     "muir"
+    ],
+    "correctas": [
+     "murray"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "perfecto",
+    "en": [
+     "perfect",
+     "imperfect",
+     "ideal"
+    ],
+    "correctas": [
+     "perfect"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "mhz",
+    "en": [
+     "mhz",
+     "khz",
+     "fm"
+    ],
+    "correctas": [
+     "mhz"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "permitido",
+    "en": [
+     "allowed",
+     "permitted",
+     "enabled"
+    ],
+    "correctas": [
+     "allowed",
+     "permitted"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "jordi",
+    "en": [
+     "jordi",
+     "enric",
+     "josep"
+    ],
+    "correctas": [
+     "george",
+     "jordi"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "girls",
+    "en": [
+     "girls",
+     "footloose",
+     "boys"
+    ],
+    "correctas": [
+     "girls"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "universitarios",
+    "en": [
+     "students",
+     "undergraduates",
+     "university"
+    ],
+    "correctas": [
+     "university"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "tiros",
+    "en": [
+     "shots",
+     "shootout",
+     "shootouts"
+    ],
+    "correctas": [
+     "shots"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "trigo",
+    "en": [
+     "wheat",
+     "barley",
+     "corn"
+    ],
+    "correctas": [
+     "wheat"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "persa",
+    "en": [
+     "persian",
+     "iranian",
+     "persians"
+    ],
+    "correctas": [
+     "farsi",
+     "persian"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "tennessee",
+    "en": [
+     "tennessee",
+     "alabama",
+     "carolina"
+    ],
+    "correctas": [
+     "tennessee"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "civilización",
+    "en": [
+     "civilization",
+     "civilisation",
+     "civilizations"
+    ],
+    "correctas": [
+     "civilisation",
+     "civilization"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "complejos",
+    "en": [
+     "complex",
+     "complexes",
+     "functional"
+    ],
+    "correctas": [
+     "complex",
+     "complexes"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "mariana",
+    "en": [
+     "teresa",
+     "mariana",
+     "francisca"
+    ],
+    "correctas": [
+     "mariana"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "turco",
+    "en": [
+     "turkish",
+     "istanbul",
+     "ankara"
+    ],
+    "correctas": [
+     "turco",
+     "turk",
+     "turkish"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "colegios",
+    "en": [
+     "schools",
+     "preschools",
+     "colleges"
+    ],
+    "correctas": [
+     "colleges",
+     "schools"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "enfrentamientos",
+    "en": [
+     "clashes",
+     "confrontations",
+     "skirmishes"
+    ],
+    "correctas": [
+     "clashes",
+     "confrontations"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "iluminación",
+    "en": [
+     "lighting",
+     "illumination",
+     "lights"
+    ],
+    "correctas": [
+     "illumination",
+     "lighting"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "convocado",
+    "en": [
+     "invited",
+     "selected",
+     "chosen"
+    ],
+    "correctas": [
+     "convened",
+     "summoned"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "apartado",
+    "en": [
+     "subsection",
+     "subheading",
+     "section"
+    ],
+    "correctas": [
+     "paragraph"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "participando",
+    "en": [
+     "participated",
+     "participating",
+     "participation"
+    ],
+    "correctas": [
+     "participating"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "mineral",
+    "en": [
+     "mineral",
+     "minerals",
+     "ore"
+    ],
+    "correctas": [
+     "mineral",
+     "ore"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "sustancias",
+    "en": [
+     "substances",
+     "chemicals",
+     "substance"
+    ],
+    "correctas": [
+     "substances"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "entero",
+    "en": [
+     "whole",
+     "entire",
+     "remainders"
+    ],
+    "correctas": [
+     "entire",
+     "integer",
+     "whole"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "impulso",
+    "en": [
+     "impetus",
+     "impulse",
+     "boost"
+    ],
+    "correctas": [
+     "boost",
+     "impetus",
+     "impulse"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "computadora",
+    "en": [
+     "computer",
+     "computers",
+     "microcomputer"
+    ],
+    "correctas": [
+     "computer"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "lectores",
+    "en": [
+     "readers",
+     "readership",
+     "reader"
+    ],
+    "correctas": [
+     "reader",
+     "readers",
+     "readership"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "castellana",
+    "en": [
+     "castilian",
+     "spanish",
+     "aragonese"
+    ],
+    "correctas": [
+     "castellana"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "catedrático",
+    "en": [
+     "professor",
+     "lecturer",
+     "emeritus"
+    ],
+    "correctas": [
+     "professor"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "elevación",
+    "en": [
+     "elevation",
+     "elevated",
+     "altitude"
+    ],
+    "correctas": [
+     "elevation",
+     "uplift"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "móviles",
+    "en": [
+     "mobile",
+     "mobiles",
+     "phones"
+    ],
+    "correctas": [
+     "mobile",
+     "mobiles"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "integra",
+    "en": [
+     "integrates",
+     "includes",
+     "comprises"
+    ],
+    "correctas": [
+     "integra",
+     "integrates"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "rotación",
+    "en": [
+     "rotation",
+     "rotational",
+     "rotations"
+    ],
+    "correctas": [
+     "rotating",
+     "rotation"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "estabilidad",
+    "en": [
+     "stability",
+     "stabilization",
+     "instability"
+    ],
+    "correctas": [
+     "stability"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "dependiente",
+    "en": [
+     "dependent",
+     "dependant",
+     "administered"
+    ],
+    "correctas": [
+     "dependant",
+     "dependent",
+     "subsidiary"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "curva",
+    "en": [
+     "curve",
+     "curves",
+     "curvature"
+    ],
+    "correctas": [
+     "bend",
+     "curve",
+     "curved"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "alabama",
+    "en": [
+     "alabama",
+     "carolina",
+     "mississippi"
+    ],
+    "correctas": [
+     "alabama"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "maestría",
+    "en": [
+     "degree",
+     "phd",
+     "doctorate"
+    ],
+    "correctas": [
+     "mastery"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "centra",
+    "en": [
+     "focuses",
+     "revolves",
+     "focusses"
+    ],
+    "correctas": [
+     "centers",
+     "focuses"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "hidrógeno",
+    "en": [
+     "hydrogen",
+     "deuterium",
+     "helium"
+    ],
+    "correctas": [
+     "hydrogen"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "krai",
+    "en": [
+     "krai",
+     "oblast",
+     "zabaykalsky"
+    ],
+    "correctas": [
+     "krai"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "criminal",
+    "en": [
+     "criminal",
+     "crime",
+     "criminals"
+    ],
+    "correctas": [
+     "criminal"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "tejidos",
+    "en": [
+     "tissue",
+     "tissues",
+     "fibres"
+    ],
+    "correctas": [
+     "fabrics",
+     "textiles",
+     "tissue"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "fabricante",
+    "en": [
+     "manufacturer",
+     "manufactured",
+     "manufacturers"
+    ],
+    "correctas": [
+     "manufacturer"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "adquisición",
+    "en": [
+     "acquisition",
+     "acquiring",
+     "acquire"
+    ],
+    "correctas": [
+     "acquisition",
+     "procurement",
+     "purchase"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "cuadrado",
+    "en": [
+     "square",
+     "rectangle",
+     "squared"
+    ],
+    "correctas": [
+     "square"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "israelí",
+    "en": [
+     "israeli",
+     "israel",
+     "idf"
+    ],
+    "correctas": [
+     "israel",
+     "israeli",
+     "israelis"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "existían",
+    "en": [
+     "existed",
+     "exist",
+     "were"
+    ],
+    "correctas": [
+     "existed"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "expulsado",
+    "en": [
+     "expelled",
+     "ejected",
+     "banned"
+    ],
+    "correctas": [
+     "ejected",
+     "expelled"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "guerreros",
+    "en": [
+     "warriors",
+     "warrior",
+     "horsemen"
+    ],
+    "correctas": [
+     "warriors"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "positivo",
+    "en": [
+     "positive",
+     "negative",
+     "positivity"
+    ],
+    "correctas": [
+     "positive"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "combatir",
+    "en": [
+     "combating",
+     "eradicate",
+     "combatting"
+    ],
+    "correctas": [
+     "combat"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "iguales",
+    "en": [
+     "equal",
+     "identically",
+     "equals"
+    ],
+    "correctas": [
+     "equal",
+     "equals"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "impuesto",
+    "en": [
+     "levied",
+     "tax",
+     "taxes"
+    ],
+    "correctas": [
+     "tax",
+     "taxes"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "modificación",
+    "en": [
+     "modification",
+     "modifications",
+     "alteration"
+    ],
+    "correctas": [
+     "alteration",
+     "amendment",
+     "modification"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "ginebra",
+    "en": [
+     "geneva",
+     "lausanne",
+     "zurich"
+    ],
+    "correctas": [
+     "geneva",
+     "gin"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "luces",
+    "en": [
+     "lights",
+     "lighting",
+     "spotlights"
+    ],
+    "correctas": [
+     "lights"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "concluyó",
+    "en": [
+     "concluded",
+     "concluding",
+     "ended"
+    ],
+    "correctas": [
+     "concluded"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "interiores",
+    "en": [
+     "interior",
+     "interiors",
+     "exteriors"
+    ],
+    "correctas": [
+     "interior",
+     "interiors"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "juveniles",
+    "en": [
+     "juveniles",
+     "juvenile",
+     "youth"
+    ],
+    "correctas": [
+     "juvenile",
+     "juveniles"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "historieta",
+    "en": [
+     "comics",
+     "comic",
+     "cartoon"
+    ],
+    "correctas": [
+     "comic",
+     "comics"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "sindicato",
+    "en": [
+     "workers",
+     "cgt",
+     "steelworkers"
+    ],
+    "correctas": [
+     "syndicate",
+     "union",
+     "unión"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "períodos",
+    "en": [
+     "periods",
+     "period",
+     "durations"
+    ],
+    "correctas": [
+     "periods"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "masculina",
+    "en": [
+     "male",
+     "female",
+     "women"
+    ],
+    "correctas": [
+     "masculine"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "inclusión",
+    "en": [
+     "inclusion",
+     "exclusion",
+     "introduction"
+    ],
+    "correctas": [
+     "inclusion"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "rick",
+    "en": [
+     "rick",
+     "daryl",
+     "randy"
+    ],
+    "correctas": [
+     "rick"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "suspensión",
+    "en": [
+     "suspension",
+     "suspensions",
+     "suspended"
+    ],
+    "correctas": [
+     "suspension"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "desplazamiento",
+    "en": [
+     "displacement",
+     "displacements",
+     "displaces"
+    ],
+    "correctas": [
+     "displacement"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "reconocidos",
+    "en": [
+     "recognized",
+     "recognised",
+     "respected"
+    ],
+    "correctas": [
+     "acknowledged",
+     "recognised",
+     "recognized"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "proporcionar",
+    "en": [
+     "provide",
+     "providing",
+     "provided"
+    ],
+    "correctas": [
+     "provide",
+     "providing"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "berlin",
+    "en": [
+     "berlin",
+     "berliner",
+     "stuttgart"
+    ],
+    "correctas": [
+     "berlin"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "reveló",
+    "en": [
+     "revealed",
+     "confirmed",
+     "disclosed"
+    ],
+    "correctas": [
+     "revealed",
+     "unveiled"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "pedido",
+    "en": [
+     "requested",
+     "asked",
+     "request"
+    ],
+    "correctas": [
+     "order"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "históricamente",
+    "en": [
+     "historically",
+     "traditionally",
+     "geographically"
+    ],
+    "correctas": [
+     "historically"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "educativa",
+    "en": [
+     "educational",
+     "educative",
+     "education"
+    ],
+    "correctas": [
+     "educational"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "específica",
+    "en": [
+     "specific",
+     "particular",
+     "specificity"
+    ],
+    "correctas": [
+     "specific"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "huelga",
+    "en": [
+     "walkout",
+     "strike",
+     "protest"
+    ],
+    "correctas": [
+     "strike"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "centrocampista",
+    "en": [
+     "midfielder",
+     "striker",
+     "midfielder#winger"
+    ],
+    "correctas": [
+     "midfielder"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "distinta",
+    "en": [
+     "different",
+     "similar",
+     "distinct"
+    ],
+    "correctas": [
+     "different"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "eddie",
+    "en": [
+     "eddie",
+     "bobby",
+     "tommy"
+    ],
+    "correctas": [
+     "eddie"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "claudia",
+    "en": [
+     "claudia",
+     "julia",
+     "justina"
+    ],
+    "correctas": [
+     "claude",
+     "claudia"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "apple",
+    "en": [
+     "apple",
+     "macintosh",
+     "blackberry"
+    ],
+    "correctas": [
+     "apple"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "benjamin",
+    "en": [
+     "benjamin",
+     "samuel",
+     "daniel"
+    ],
+    "correctas": [
+     "benjamin"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "capitales",
+    "en": [
+     "capital",
+     "cities",
+     "capitals"
+    ],
+    "correctas": [
+     "capital",
+     "capitals"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "sostiene",
+    "en": [
+     "asserts",
+     "argues",
+     "refutes"
+    ],
+    "correctas": [
+     "holds",
+     "sustains"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "adecuada",
+    "en": [
+     "adequate",
+     "suitable",
+     "necessary"
+    ],
+    "correctas": [
+     "adequate"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "just",
+    "en": [
+     "wanna",
+     "carey",
+     "somethin"
+    ],
+    "correctas": [
+     "just"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "huesos",
+    "en": [
+     "bones",
+     "bone",
+     "skeletons"
+    ],
+    "correctas": [
+     "bone",
+     "bones"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "vídeos",
+    "en": [
+     "videos",
+     "clips",
+     "video"
+    ],
+    "correctas": [
+     "videos"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "serena",
+    "en": [
+     "serena",
+     "venus",
+     "aurora"
+    ],
+    "correctas": [
+     "serena"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "declarada",
+    "en": [
+     "declared",
+     "proclaimed",
+     "recognized"
+    ],
+    "correctas": [
+     "declared"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "unam",
+    "en": [
+     "unam",
+     "universidad",
+     "autónoma"
+    ],
+    "correctas": [
+     "unam"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "salsa",
+    "en": [
+     "salsa",
+     "sauce",
+     "gravy"
+    ],
+    "correctas": [
+     "gravy",
+     "salsa",
+     "sauce"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "salvaje",
+    "en": [
+     "wild",
+     "untamed",
+     "feral"
+    ],
+    "correctas": [
+     "savage",
+     "wild"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "baleares",
+    "en": [
+     "balearic",
+     "baleares",
+     "majorca"
+    ],
+    "correctas": [
+     "balearic"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "bryan",
+    "en": [
+     "bryan",
+     "shelton",
+     "broderick"
+    ],
+    "correctas": [
+     "bryan"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "alfabeto",
+    "en": [
+     "alphabet",
+     "alphabets",
+     "syllabary"
+    ],
+    "correctas": [
+     "alphabet"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "manuscrito",
+    "en": [
+     "manuscript",
+     "manuscripts",
+     "codex"
+    ],
+    "correctas": [
+     "manuscript"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "petersburgo",
+    "en": [
+     "petersburg",
+     "moscow",
+     "ekaterinburg"
+    ],
+    "correctas": [
+     "petersburg"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "gosse",
+    "en": [
+     "houten",
+     "duzee",
+     "area_water_sq_mi"
+    ],
+    "correctas": [
+     "gosse"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "visitó",
+    "en": [
+     "visited",
+     "travelled",
+     "traveled"
+    ],
+    "correctas": [
+     "visited"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "horizontal",
+    "en": [
+     "horizontal",
+     "vertical",
+     "vertically"
+    ],
+    "correctas": [
+     "horizontal"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "vestido",
+    "en": [
+     "wearing",
+     "dress",
+     "attire"
+    ],
+    "correctas": [
+     "dress",
+     "dressed"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "especializada",
+    "en": [
+     "specialized",
+     "specialised",
+     "specializing"
+    ],
+    "correctas": [
+     "specialised",
+     "specialized"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "octavo",
+    "en": [
+     "eighth",
+     "sixth",
+     "tenth"
+    ],
+    "correctas": [
+     "eighth"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "palestina",
+    "en": [
+     "palestine",
+     "palestinian",
+     "israel"
+    ],
+    "correctas": [
+     "palestine",
+     "palestinian"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "ampliar",
+    "en": [
+     "expand",
+     "expanding",
+     "broaden"
+    ],
+    "correctas": [
+     "enlarge",
+     "expand",
+     "zoom"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "cartel",
+    "en": [
+     "cartel",
+     "headline",
+     "poster"
+    ],
+    "correctas": [
+     "billboard",
+     "cartel",
+     "poster"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "maryland",
+    "en": [
+     "maryland",
+     "virginia",
+     "massachusetts"
+    ],
+    "correctas": [
+     "maryland"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "arm",
+    "en": [
+     "arm",
+     "xeon",
+     "ffff"
+    ],
+    "correctas": [
+     "arm"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "granja",
+    "en": [
+     "farm",
+     "farmyard",
+     "farms"
+    ],
+    "correctas": [
+     "farm",
+     "farmhouse"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "patas",
+    "en": [
+     "legs",
+     "claws",
+     "tails"
+    ],
+    "correctas": [
+     "legs",
+     "paws"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "vanguardia",
+    "en": [
+     "vanguard",
+     "garde",
+     "vanguardia"
+    ],
+    "correctas": [
+     "forefront",
+     "vanguard"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "presentada",
+    "en": [
+     "presented",
+     "previewed",
+     "submitted"
+    ],
+    "correctas": [
+     "presented",
+     "submitted"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "masters",
+    "en": [
+     "masters",
+     "slam",
+     "federer"
+    ],
+    "correctas": [
+     "masters"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "préstamo",
+    "en": [
+     "loan",
+     "loaned",
+     "loans"
+    ],
+    "correctas": [
+     "lending",
+     "loan"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "estatuto",
+    "en": [
+     "statute",
+     "constitution",
+     "constitutional"
+    ],
+    "correctas": [
+     "statute",
+     "statutes"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "dream",
+    "en": [
+     "dream",
+     "dreamin",
+     "dreams"
+    ],
+    "correctas": [
+     "dream"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "liderazgo",
+    "en": [
+     "leadership",
+     "leader",
+     "leaders"
+    ],
+    "correctas": [
+     "leadership"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "mostrando",
+    "en": [
+     "showing",
+     "displaying",
+     "showed"
+    ],
+    "correctas": [
+     "displaying",
+     "showing"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "space",
+    "en": [
+     "space",
+     "spaceport",
+     "spaceship"
+    ],
+    "correctas": [
+     "space"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "célula",
+    "en": [
+     "cell",
+     "organelle",
+     "cells"
+    ],
+    "correctas": [
+     "cell"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "lineal",
+    "en": [
+     "linear",
+     "linearity",
+     "linearly"
+    ],
+    "correctas": [
+     "linear"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "franquicia",
+    "en": [
+     "franchise",
+     "franchises",
+     "game"
+    ],
+    "correctas": [
+     "franchise",
+     "franchising"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "adquirir",
+    "en": [
+     "acquire",
+     "acquiring",
+     "purchase"
+    ],
+    "correctas": [
+     "acquire",
+     "acquiring",
+     "purchase"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "expulsión",
+    "en": [
+     "expulsion",
+     "expulsions",
+     "expelling"
+    ],
+    "correctas": [
+     "deportation",
+     "expulsion"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "linda",
+    "en": [
+     "linda",
+     "bonnie",
+     "betty"
+    ],
+    "correctas": [
+     "cute",
+     "linda",
+     "nice"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "genes",
+    "en": [
+     "genes",
+     "gene",
+     "chromosome"
+    ],
+    "correctas": [
+     "gene",
+     "genes"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "plana",
+    "en": [
+     "plana",
+     "pla",
+     "flat"
+    ],
+    "correctas": [
+     "flat"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "nicolas",
+    "en": [
+     "nicolas",
+     "sebastien",
+     "christophe"
+    ],
+    "correctas": [
+     "nicolas"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "perón",
+    "en": [
+     "perón",
+     "yrigoyen",
+     "peronist"
+    ],
+    "correctas": [
+     "perón"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "observaciones",
+    "en": [
+     "observations",
+     "observation",
+     "observational"
+    ],
+    "correctas": [
+     "comments",
+     "observations",
+     "remarks"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "desembocadura",
+    "en": [
+     "river",
+     "estuary",
+     "confluence"
+    ],
+    "correctas": [
+     "mouth"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "pepe",
+    "en": [
+     "pepe",
+     "paco",
+     "gato"
+    ],
+    "correctas": [
+     "jiminy",
+     "pepe"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "rivales",
+    "en": [
+     "rivals",
+     "rival",
+     "rivalries"
+    ],
+    "correctas": [
+     "rival",
+     "rivals"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "alice",
+    "en": [
+     "alice",
+     "audrey",
+     "emily"
+    ],
+    "correctas": [
+     "alice"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "rayo",
+    "en": [
+     "lightning",
+     "radiant",
+     "flame"
+    ],
+    "correctas": [
+     "beam",
+     "lightning",
+     "ray"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "físicos",
+    "en": [
+     "physical",
+     "physicists",
+     "mental"
+    ],
+    "correctas": [
+     "physical",
+     "physicists"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "organiza",
+    "en": [
+     "organizes",
+     "organises",
+     "organized"
+    ],
+    "correctas": [
+     "arranges",
+     "organises",
+     "organize"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "bombas",
+    "en": [
+     "bombs",
+     "bomb",
+     "incendiary"
+    ],
+    "correctas": [
+     "bombs",
+     "pumps"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "maurice",
+    "en": [
+     "maurice",
+     "claude",
+     "emile"
+    ],
+    "correctas": [
+     "maurice"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "financieros",
+    "en": [
+     "financial",
+     "finance",
+     "finances"
+    ],
+    "correctas": [
+     "financial",
+     "financiers"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "cecilia",
+    "en": [
+     "cecilia",
+     "elisa",
+     "justina"
+    ],
+    "correctas": [
+     "cecile",
+     "cecilia"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "marte",
+    "en": [
+     "mars",
+     "jupiter",
+     "ganymede"
+    ],
+    "correctas": [
+     "mars"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "retratos",
+    "en": [
+     "portraits",
+     "portrait",
+     "paintings"
+    ],
+    "correctas": [
+     "portraits"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "loco",
+    "en": [
+     "crazy",
+     "mad",
+     "hobo"
+    ],
+    "correctas": [
+     "crazy",
+     "insane",
+     "loco"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "exitoso",
+    "en": [
+     "successful",
+     "success",
+     "unsuccessful"
+    ],
+    "correctas": [
+     "successful"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "harrison",
+    "en": [
+     "harrison",
+     "starr",
+     "jennings"
+    ],
+    "correctas": [
+     "harrison"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "stewart",
+    "en": [
+     "stewart",
+     "campbell",
+     "carmichael"
+    ],
+    "correctas": [
+     "stewart"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "formalmente",
+    "en": [
+     "formally",
+     "officially",
+     "informally"
+    ],
+    "correctas": [
+     "formally"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "argelia",
+    "en": [
+     "algeria",
+     "morocco",
+     "tunisia"
+    ],
+    "correctas": [
+     "algeria",
+     "algerian",
+     "algiers"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "sound",
+    "en": [
+     "sound",
+     "soundscape",
+     "inlet"
+    ],
+    "correctas": [
+     "sound"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "novio",
+    "en": [
+     "boyfriend",
+     "girlfriend",
+     "fiance"
+    ],
+    "correctas": [
+     "boyfriend",
+     "groom"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "rechazo",
+    "en": [
+     "rejection",
+     "disapproval",
+     "acceptance"
+    ],
+    "correctas": [
+     "refusal",
+     "reject",
+     "rejection"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "parker",
+    "en": [
+     "parker",
+     "dixon",
+     "lomax"
+    ],
+    "correctas": [
+     "parker"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "eligió",
+    "en": [
+     "chose",
+     "chosen",
+     "decided"
+    ],
+    "correctas": [
+     "chose"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "firmar",
+    "en": [
+     "signing",
+     "signed",
+     "sign"
+    ],
+    "correctas": [
+     "sign",
+     "signing"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "describir",
+    "en": [
+     "describe",
+     "characterize",
+     "define"
+    ],
+    "correctas": [
+     "describe",
+     "describing"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "xavier",
+    "en": [
+     "xavier",
+     "gabriel",
+     "gaspar"
+    ],
+    "correctas": [
+     "xavier"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "chipre",
+    "en": [
+     "cyprus",
+     "greece",
+     "cypriot"
+    ],
+    "correctas": [
+     "cyprus"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "guy",
+    "en": [
+     "guy",
+     "maurice",
+     "phillipe"
+    ],
+    "correctas": [
+     "guy"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "expresiones",
+    "en": [
+     "expressions",
+     "expression",
+     "representations"
+    ],
+    "correctas": [
+     "expressions"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "songs",
+    "en": [
+     "billboard",
+     "songs",
+     "chart"
+    ],
+    "correctas": [
+     "songs"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "ruptura",
+    "en": [
+     "breakup",
+     "rupture",
+     "tension"
+    ],
+    "correctas": [
+     "breakup",
+     "rupture"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "emisora",
+    "en": [
+     "radio",
+     "fm",
+     "broadcasting"
+    ],
+    "correctas": [
+     "broadcaster"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "filósofos",
+    "en": [
+     "philosophers",
+     "thinkers",
+     "logicians"
+    ],
+    "correctas": [
+     "philosophers"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "previsto",
+    "en": [
+     "planned",
+     "postponed",
+     "slated"
+    ],
+    "correctas": [
+     "planned"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "adolescente",
+    "en": [
+     "teenager",
+     "teenage",
+     "teenaged"
+    ],
+    "correctas": [
+     "adolescent",
+     "teen",
+     "teenage"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "inés",
+    "en": [
+     "isabel",
+     "francisca",
+     "inés"
+    ],
+    "correctas": [
+     "agnes",
+     "inez",
+     "inés"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "actualizado",
+    "en": [
+     "updated",
+     "update",
+     "overhauled"
+    ],
+    "correctas": [
+     "updated"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "prototipo",
+    "en": [
+     "prototype",
+     "prototypes",
+     "testbed"
+    ],
+    "correctas": [
+     "prototype"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "dinámica",
+    "en": [
+     "dynamic",
+     "dynamics",
+     "dynamical"
+    ],
+    "correctas": [
+     "dynamic",
+     "dynamics"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "mencionada",
+    "en": [
+     "mentioned",
+     "mentions",
+     "alluded"
+    ],
+    "correctas": [
+     "mentioned"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "variación",
+    "en": [
+     "variation",
+     "variations",
+     "fluctuation"
+    ],
+    "correctas": [
+     "change",
+     "variance",
+     "variation"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "latitud",
+    "en": [
+     "latitude",
+     "longitude",
+     "equator"
+    ],
+    "correctas": [
+     "latitude"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "trío",
+    "en": [
+     "trio",
+     "duo",
+     "quartet"
+    ],
+    "correctas": [
+     "threesome",
+     "trio"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "óleo",
+    "en": [
+     "painting",
+     "canvas",
+     "tempera"
+    ],
+    "correctas": [
+     "oil"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "usted",
+    "en": [
+     "somebody",
+     "nobody",
+     "anybody"
+    ],
+    "correctas": [
+     "you"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "sabía",
+    "en": [
+     "knew",
+     "wondered",
+     "guessed"
+    ],
+    "correctas": [
+     "knew"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "alfa",
+    "en": [
+     "alpha",
+     "alfa",
+     "beta"
+    ],
+    "correctas": [
+     "alfa",
+     "alpha"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "caudal",
+    "en": [
+     "inflow",
+     "m³/s",
+     "flow"
+    ],
+    "correctas": [
+     "caudal",
+     "flow"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "ann",
+    "en": [
+     "ann",
+     "margret",
+     "linda"
+    ],
+    "correctas": [
+     "ann"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "antecedentes",
+    "en": [
+     "details",
+     "evidence",
+     "indications"
+    ],
+    "correctas": [
+     "background",
+     "backgrounds"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "grabada",
+    "en": [
+     "recorded",
+     "rerecorded",
+     "recording"
+    ],
+    "correctas": [
+     "engraved"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "irlandés",
+    "en": [
+     "irish",
+     "gaelic",
+     "padraig"
+    ],
+    "correctas": [
+     "irish",
+     "irishman"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "asiático",
+    "en": [
+     "asian",
+     "asia",
+     "indochinese"
+    ],
+    "correctas": [
+     "asian",
+     "asiatic"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "guarda",
+    "en": [
+     "handles",
+     "retrieves",
+     "maintains"
+    ],
+    "correctas": [
+     "guard"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "edgar",
+    "en": [
+     "edgar",
+     "poe",
+     "hugo"
+    ],
+    "correctas": [
+     "edgar"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "anchura",
+    "en": [
+     "length",
+     "width",
+     "widths"
+    ],
+    "correctas": [
+     "breadth",
+     "width"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "marciales",
+    "en": [
+     "martial",
+     "karate",
+     "kickboxing"
+    ],
+    "correctas": [
+     "martial"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "barry",
+    "en": [
+     "barry",
+     "bruce",
+     "bob"
+    ],
+    "correctas": [
+     "barry"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "utilidad",
+    "en": [
+     "usefulness",
+     "benefit",
+     "useful"
+    ],
+    "correctas": [
+     "useful",
+     "usefulness",
+     "utility"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "manchester",
+    "en": [
+     "manchester",
+     "liverpool",
+     "southampton"
+    ],
+    "correctas": [
+     "manchester"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "beatles",
+    "en": [
+     "beatles",
+     "beatle",
+     "mccartney"
+    ],
+    "correctas": [
+     "beatles"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "higgins",
+    "en": [
+     "higgins",
+     "banfield",
+     "rancagua"
+    ],
+    "correctas": [
+     "higgins"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "celebrada",
+    "en": [
+     "held",
+     "meeting",
+     "celebration"
+    ],
+    "correctas": [
+     "celebrated",
+     "held"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "receptor",
+    "en": [
+     "receiver",
+     "signaling",
+     "modulate"
+    ],
+    "correctas": [
+     "receiver",
+     "receptor",
+     "recipient"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "personalmente",
+    "en": [
+     "personally",
+     "him",
+     "himself"
+    ],
+    "correctas": [
+     "personally"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "desapareció",
+    "en": [
+     "disappeared",
+     "vanished",
+     "reappeared"
+    ],
+    "correctas": [
+     "disappeared",
+     "vanished"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "prólogo",
+    "en": [
+     "preface",
+     "prologue",
+     "afterword"
+    ],
+    "correctas": [
+     "foreword",
+     "preface",
+     "prologue"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "valenciano",
+    "en": [
+     "valencian",
+     "catalan",
+     "catalonian"
+    ],
+    "correctas": [
+     "valencian"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "xbox",
+    "en": [
+     "xbox",
+     "playstation",
+     "wii"
+    ],
+    "correctas": [
+     "xbox"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "force",
+    "en": [
+     "force",
+     "airforce",
+     "recon"
+    ],
+    "correctas": [
+     "force"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "tramos",
+    "en": [
+     "viaducts",
+     "arches",
+     "roadbed"
+    ],
+    "correctas": [
+     "sections",
+     "stretches",
+     "tranches"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "contemporáneos",
+    "en": [
+     "contemporaries",
+     "contemporary",
+     "realists"
+    ],
+    "correctas": [
+     "contemporaneous",
+     "contemporaries",
+     "contemporary"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "ken",
+    "en": [
+     "ken",
+     "abe",
+     "yasuhiro"
+    ],
+    "correctas": [
+     "ken"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "campeona",
+    "en": [
+     "champion",
+     "championships",
+     "champions"
+    ],
+    "correctas": [
+     "champ",
+     "champion"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "lgbt",
+    "en": [
+     "lgbt",
+     "gay",
+     "lgbtq"
+    ],
+    "correctas": [
+     "lgbt"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "automáticamente",
+    "en": [
+     "automatically",
+     "automatic",
+     "manually"
+    ],
+    "correctas": [
+     "automatically"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "centre",
+    "en": [
+     "centre",
+     "parc",
+     "center"
+    ],
+    "correctas": [
+     "centre"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "pacheco",
+    "en": [
+     "pacheco",
+     "pimentel",
+     "castro"
+    ],
+    "correctas": [
+     "pacheco"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "necesarias",
+    "en": [
+     "necessary",
+     "needed",
+     "required"
+    ],
+    "correctas": [
+     "necessary"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "abraham",
+    "en": [
+     "abraham",
+     "jacob",
+     "moses"
+    ],
+    "correctas": [
+     "abraham"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "colaboradores",
+    "en": [
+     "collaborators",
+     "colleagues",
+     "contributors"
+    ],
+    "correctas": [
+     "collaborators",
+     "contributors",
+     "partners"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "lost",
+    "en": [
+     "paradise",
+     "uncharted",
+     "babylon"
+    ],
+    "correctas": [
+     "lost"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "baterista",
+    "en": [
+     "drummer",
+     "bassist",
+     "guitarist"
+    ],
+    "correctas": [
+     "drummer"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "caras",
+    "en": [
+     "faces",
+     "face",
+     "triangles"
+    ],
+    "correctas": [
+     "expensive",
+     "faces"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "supercopa",
+    "en": [
+     "cup",
+     "supercup",
+     "uefa"
+    ],
+    "correctas": [
+     "supercopa",
+     "supercup"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "turín",
+    "en": [
+     "turin",
+     "torino",
+     "milan"
+    ],
+    "correctas": [
+     "torino",
+     "turin"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "lesiones",
+    "en": [
+     "injuries",
+     "injury",
+     "concussions"
+    ],
+    "correctas": [
+     "injuries",
+     "injury",
+     "lesions"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "disminución",
+    "en": [
+     "decrease",
+     "decreased",
+     "increase"
+    ],
+    "correctas": [
+     "decline",
+     "decrease"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "apoyó",
+    "en": [
+     "supporter",
+     "supported",
+     "campaigned"
+    ],
+    "correctas": [
+     "supported"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "aceptación",
+    "en": [
+     "acceptance",
+     "rejection",
+     "acceptability"
+    ],
+    "correctas": [
+     "acceptance",
+     "accepting"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "sídney",
+    "en": [
+     "sydney",
+     "melbourne",
+     "brisbane"
+    ],
+    "correctas": [
+     "sydney"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "parra",
+    "en": [
+     "parra",
+     "jara",
+     "granados"
+    ],
+    "correctas": [
+     "parra"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "facilidad",
+    "en": [
+     "ease",
+     "easy",
+     "easily"
+    ],
+    "correctas": [
+     "ease"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "libras",
+    "en": [
+     "pounds",
+     "£",
+     "₤"
+    ],
+    "correctas": [
+     "lbs",
+     "pounds"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "modificar",
+    "en": [
+     "modifying",
+     "change",
+     "altering"
+    ],
+    "correctas": [
+     "amend",
+     "modify",
+     "modifying"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "land",
+    "en": [
+     "land",
+     "regen",
+     "summerland"
+    ],
+    "correctas": [
+     "land"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "cedido",
+    "en": [
+     "loaned",
+     "transferred",
+     "loan"
+    ],
+    "correctas": [
+     "ceded",
+     "loaned"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "definido",
+    "en": [
+     "defined",
+     "defines",
+     "redefined"
+    ],
+    "correctas": [
+     "defined"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "contribuyó",
+    "en": [
+     "contributed",
+     "helped",
+     "credited"
+    ],
+    "correctas": [
+     "contributed"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "terrestres",
+    "en": [
+     "terrestrial",
+     "aquatic",
+     "marine"
+    ],
+    "correctas": [
+     "terrestrial"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "rara",
+    "en": [
+     "rare",
+     "uncommon",
+     "rarely"
+    ],
+    "correctas": [
+     "rare"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "soviéticos",
+    "en": [
+     "soviets",
+     "soviet",
+     "ussr"
+    ],
+    "correctas": [
+     "soviet",
+     "soviets"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "figueroa",
+    "en": [
+     "pacheco",
+     "figueroa",
+     "alvarado"
+    ],
+    "correctas": [
+     "figueroa"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "adquirido",
+    "en": [
+     "acquired",
+     "purchased",
+     "reacquired"
+    ],
+    "correctas": [
+     "acquired",
+     "purchased"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "pérdidas",
+    "en": [
+     "losses",
+     "loss",
+     "casualties"
+    ],
+    "correctas": [
+     "loss",
+     "losses"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "fantasía",
+    "en": [
+     "fantasy",
+     "fantasia",
+     "fantasies"
+    ],
+    "correctas": [
+     "fantasia",
+     "fantasy"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "fenómenos",
+    "en": [
+     "phenomena",
+     "phenomenon",
+     "anomalies"
+    ],
+    "correctas": [
+     "freaks",
+     "phenomena"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "conecta",
+    "en": [
+     "connects",
+     "connecting",
+     "connect"
+    ],
+    "correctas": [
+     "connect",
+     "connects"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "bus",
+    "en": [
+     "bus",
+     "buses",
+     "minibus"
+    ],
+    "correctas": [
+     "bus"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "mini",
+    "en": [
+     "mini",
+     "mega",
+     "deluxe"
+    ],
+    "correctas": [
+     "mini"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "master",
+    "en": [
+     "master",
+     "masters",
+     "bs"
+    ],
+    "correctas": [
+     "master"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "africano",
+    "en": [
+     "african",
+     "africa",
+     "saharan"
+    ],
+    "correctas": [
+     "african"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "let",
+    "en": [
+     "wanna",
+     "gonna",
+     "tonight"
+    ],
+    "correctas": [
+     "let"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "poética",
+    "en": [
+     "poetry",
+     "poetic",
+     "poetics"
+    ],
+    "correctas": [
+     "poetic"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "robinson",
+    "en": [
+     "robinson",
+     "patterson",
+     "coleman"
+    ],
+    "correctas": [
+     "robinson"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "otomano",
+    "en": [
+     "ottoman",
+     "ottomans",
+     "pasha"
+    ],
+    "correctas": [
+     "ottoman"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "over",
+    "en": [
+     "til",
+     "moonlight",
+     "rainbow"
+    ],
+    "correctas": [
+     "over"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "finanzas",
+    "en": [
+     "finance",
+     "finances",
+     "economics"
+    ],
+    "correctas": [
+     "finance",
+     "finances",
+     "financials"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "sinfónica",
+    "en": [
+     "orchestra",
+     "philharmonic",
+     "symphony"
+    ],
+    "correctas": [
+     "symphonic",
+     "symphony"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "suborden",
+    "en": [
+     "suborder",
+     "infraorder",
+     "subordo"
+    ],
+    "correctas": [
+     "suborder"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "boxeo",
+    "en": [
+     "boxing",
+     "kickboxing",
+     "judo"
+    ],
+    "correctas": [
+     "boxing"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "ocupada",
+    "en": [
+     "occupied",
+     "reoccupied",
+     "unoccupied"
+    ],
+    "correctas": [
+     "busy",
+     "occupied"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "renault",
+    "en": [
+     "renault",
+     "peugeot",
+     "audi"
+    ],
+    "correctas": [
+     "renault"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "raymond",
+    "en": [
+     "raymond",
+     "leroy",
+     "roger"
+    ],
+    "correctas": [
+     "raymond"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "comparte",
+    "en": [
+     "shared",
+     "shares",
+     "share"
+    ],
+    "correctas": [
+     "share",
+     "shares"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "jerry",
+    "en": [
+     "jerry",
+     "eddie",
+     "tom"
+    ],
+    "correctas": [
+     "jerry"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "árbitro",
+    "en": [
+     "referee",
+     "referees",
+     "refereeing"
+    ],
+    "correctas": [
+     "arbitrator",
+     "ref",
+     "referee"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "antropología",
+    "en": [
+     "anthropology",
+     "anthropological",
+     "ethnology"
+    ],
+    "correctas": [
+     "anthropology"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "favorable",
+    "en": [
+     "favourable",
+     "favorable",
+     "unfavorable"
+    ],
+    "correctas": [
+     "favorable",
+     "favourable"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "bizantino",
+    "en": [
+     "byzantine",
+     "byzantium",
+     "byzantines"
+    ],
+    "correctas": [
+     "byzantine"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "significativa",
+    "en": [
+     "significant",
+     "substantial",
+     "insignificant"
+    ],
+    "correctas": [
+     "meaningful",
+     "significant"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "protegida",
+    "en": [
+     "protected",
+     "protects",
+     "protection"
+    ],
+    "correctas": [
+     "protected"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "fiel",
+    "en": [
+     "faithful",
+     "loyal",
+     "steadfast"
+    ],
+    "correctas": [
+     "faithful"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "derivado",
+    "en": [
+     "derived",
+     "derives",
+     "derivative"
+    ],
+    "correctas": [
+     "derivative",
+     "derived"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "rodaje",
+    "en": [
+     "filming",
+     "filmed",
+     "movie"
+    ],
+    "correctas": [
+     "filming",
+     "shooting"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "escalera",
+    "en": [
+     "staircase",
+     "stairway",
+     "stairs"
+    ],
+    "correctas": [
+     "ladder",
+     "stair",
+     "staircase"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "heinrich",
+    "en": [
+     "heinrich",
+     "wilhelm",
+     "friedrich"
+    ],
+    "correctas": [
+     "heinrich"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "reglamento",
+    "en": [
+     "regulations",
+     "regulation",
+     "provisions"
+    ],
+    "correctas": [
+     "regulation",
+     "regulations",
+     "rules"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "arabia",
+    "en": [
+     "arabia",
+     "saudi",
+     "oman"
+    ],
+    "correctas": [
+     "arabia"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "gigantes",
+    "en": [
+     "giant",
+     "giants",
+     "gigantes"
+    ],
+    "correctas": [
+     "giant",
+     "giants"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "experimentos",
+    "en": [
+     "experiments",
+     "experiment",
+     "experimenters"
+    ],
+    "correctas": [
+     "experimentation",
+     "experiments"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "paisajes",
+    "en": [
+     "landscapes",
+     "landscape",
+     "seascapes"
+    ],
+    "correctas": [
+     "landscape",
+     "landscapes",
+     "scenery"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "cuesta",
+    "en": [
+     "cuesta",
+     "uphill",
+     "pila"
+    ],
+    "correctas": [
+     "cuesta"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "mito",
+    "en": [
+     "myth",
+     "myths",
+     "mythology"
+    ],
+    "correctas": [
+     "myth"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "dispuesto",
+    "en": [
+     "obligated",
+     "obliged",
+     "willing"
+    ],
+    "correctas": [
+     "willing"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "dei",
+    "en": [
+     "dei",
+     "secondo",
+     "grazie"
+    ],
+    "correctas": [
+     "dei"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "grabados",
+    "en": [
+     "engravings",
+     "etchings",
+     "lithographs"
+    ],
+    "correctas": [
+     "engraving",
+     "engravings",
+     "prints"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "efectivo",
+    "en": [
+     "effective",
+     "ineffective",
+     "notional"
+    ],
+    "correctas": [
+     "cash"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "robot",
+    "en": [
+     "robotic",
+     "robot",
+     "robots"
+    ],
+    "correctas": [
+     "robot"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "sra",
+    "en": [
+     "mrs",
+     "mary",
+     "lady"
+    ],
+    "correctas": [
+     "mrs",
+     "sra"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "cárdenas",
+    "en": [
+     "cárdenas",
+     "carrillo",
+     "alvarado"
+    ],
+    "correctas": [
+     "cárdenas"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "cuota",
+    "en": [
+     "viewership",
+     "surcharge",
+     "dividend"
+    ],
+    "correctas": [
+     "fee",
+     "quota"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "roland",
+    "en": [
+     "roland",
+     "garros",
+     "roger"
+    ],
+    "correctas": [
+     "roland"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "obreros",
+    "en": [
+     "workers",
+     "miners",
+     "laborers"
+    ],
+    "correctas": [
+     "workers",
+     "workmen"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "sagrada",
+    "en": [
+     "sacred",
+     "holy",
+     "rosary"
+    ],
+    "correctas": [
+     "sacred"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "primarias",
+    "en": [
+     "primaries",
+     "primary",
+     "secondary"
+    ],
+    "correctas": [
+     "primaries",
+     "primary"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "interpretaciones",
+    "en": [
+     "interpretations",
+     "interpretation",
+     "performances"
+    ],
+    "correctas": [
+     "interpretations"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "hembra",
+    "en": [
+     "mating",
+     "broods",
+     "copulation"
+    ],
+    "correctas": [
+     "female"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "diseñada",
+    "en": [
+     "designed",
+     "redesigned",
+     "design"
+    ],
+    "correctas": [
+     "designed"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "empresarial",
+    "en": [
+     "business",
+     "entrepreneurial",
+     "corporate"
+    ],
+    "correctas": [
+     "corporate"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "añadió",
+    "en": [
+     "gave",
+     "adding",
+     "replacing"
+    ],
+    "correctas": [
+     "added"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "gold",
+    "en": [
+     "gold",
+     "diamond",
+     "silver"
+    ],
+    "correctas": [
+     "gold"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "procedimientos",
+    "en": [
+     "procedures",
+     "procedure",
+     "methods"
+    ],
+    "correctas": [
+     "procedures",
+     "proceedings"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "dominante",
+    "en": [
+     "dominant",
+     "predominant",
+     "predominance"
+    ],
+    "correctas": [
+     "dominant",
+     "dominating"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "fred",
+    "en": [
+     "fred",
+     "bob",
+     "hal"
+    ],
+    "correctas": [
+     "fred"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "rob",
+    "en": [
+     "rob",
+     "neil",
+     "dave"
+    ],
+    "correctas": [
+     "rob"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "chaco",
+    "en": [
+     "chaco",
+     "paraguay",
+     "paraguayan"
+    ],
+    "correctas": [
+     "chaco"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "luchador",
+    "en": [
+     "wrestler",
+     "wrestling",
+     "wrestled"
+    ],
+    "correctas": [
+     "fighter",
+     "wrestler"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "ligera",
+    "en": [
+     "heavy",
+     "lighter",
+     "light"
+    ],
+    "correctas": [
+     "light",
+     "lightweight",
+     "slight"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "facultades",
+    "en": [
+     "faculties",
+     "faculty",
+     "departments"
+    ],
+    "correctas": [
+     "faculties"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "tocando",
+    "en": [
+     "busking",
+     "gigging",
+     "gigs"
+    ],
+    "correctas": [
+     "playing",
+     "touching"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "recuerdos",
+    "en": [
+     "memories",
+     "memory",
+     "mementos"
+    ],
+    "correctas": [
+     "memories",
+     "memory",
+     "souvenirs"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "site",
+    "en": [
+     "site",
+     "website",
+     "homepage"
+    ],
+    "correctas": [
+     "site"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "mantenido",
+    "en": [
+     "maintained",
+     "kept",
+     "remained"
+    ],
+    "correctas": [
+     "kept",
+     "maintained"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "popularmente",
+    "en": [
+     "popularly",
+     "colloquially",
+     "known"
+    ],
+    "correctas": [
+     "popularly"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "específicos",
+    "en": [
+     "specific",
+     "certain",
+     "types"
+    ],
+    "correctas": [
+     "specific"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "wright",
+    "en": [
+     "wright",
+     "pratt",
+     "wheeler"
+    ],
+    "correctas": [
+     "wright"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "falla",
+    "en": [
+     "fault",
+     "faults",
+     "failure"
+    ],
+    "correctas": [
+     "fail",
+     "fails",
+     "failure"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "llano",
+    "en": [
+     "llano",
+     "arriba",
+     "cuesta"
+    ],
+    "correctas": [
+     "llano",
+     "plain"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "romper",
+    "en": [
+     "break",
+     "breaking",
+     "loosen"
+    ],
+    "correctas": [
+     "break",
+     "breaking"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "huerta",
+    "en": [
+     "huerta",
+     "segura",
+     "hacienda"
+    ],
+    "correctas": [
+     "huerta",
+     "orchard"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "septentrional",
+    "en": [
+     "northernmost",
+     "southernmost",
+     "westernmost"
+    ],
+    "correctas": [
+     "northern"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "seguimiento",
+    "en": [
+     "tracking",
+     "surveillance",
+     "monitoring"
+    ],
+    "correctas": [
+     "monitoring",
+     "tracking"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "difíciles",
+    "en": [
+     "difficult",
+     "easy",
+     "harder"
+    ],
+    "correctas": [
+     "difficult"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "cerveza",
+    "en": [
+     "beer",
+     "lager",
+     "pilsner"
+    ],
+    "correctas": [
+     "beer"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "proyección",
+    "en": [
+     "projection",
+     "projections",
+     "projected"
+    ],
+    "correctas": [
+     "projection",
+     "screening"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "neerlandés",
+    "en": [
+     "dutch",
+     "belgian",
+     "surinamese"
+    ],
+    "correctas": [
+     "dutch"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "chiapas",
+    "en": [
+     "chiapas",
+     "oaxaca",
+     "veracruz"
+    ],
+    "correctas": [
+     "chiapas"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "compuestas",
+    "en": [
+     "composed",
+     "arranged",
+     "consisting"
+    ],
+    "correctas": [
+     "composite",
+     "compound"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "bloqueado",
+    "en": [
+     "blocked",
+     "reblocked",
+     "unblocked"
+    ],
+    "correctas": [
+     "blocked",
+     "locked"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "maneras",
+    "en": [
+     "ways",
+     "way",
+     "different"
+    ],
+    "correctas": [
+     "ways"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "tocó",
+    "en": [
+     "toured",
+     "drummed",
+     "shook"
+    ],
+    "correctas": [
+     "touched"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "infierno",
+    "en": [
+     "hell",
+     "purgatory",
+     "heaven"
+    ],
+    "correctas": [
+     "hell",
+     "inferno"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "gastos",
+    "en": [
+     "expenses",
+     "expenditures",
+     "costs"
+    ],
+    "correctas": [
+     "expenditure",
+     "expenditures",
+     "expense"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "africana",
+    "en": [
+     "african",
+     "africana",
+     "africa"
+    ],
+    "correctas": [
+     "african"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "conformado",
+    "en": [
+     "consisting",
+     "formed",
+     "composed"
+    ],
+    "correctas": [
+     "conformed"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "depósito",
+    "en": [
+     "depository",
+     "deposit",
+     "stored"
+    ],
+    "correctas": [
+     "deposit"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "lucio",
+    "en": [
+     "lucius",
+     "caesar",
+     "scipio"
+    ],
+    "correctas": [
+     "lucio",
+     "lucius",
+     "pike"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "montenegro",
+    "en": [
+     "montenegro",
+     "croatia",
+     "serbia"
+    ],
+    "correctas": [
+     "montenegro"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "avanzada",
+    "en": [
+     "advanced",
+     "technologically",
+     "technology"
+    ],
+    "correctas": [
+     "advanced"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "nucleares",
+    "en": [
+     "nuclear",
+     "reactors",
+     "thermonuclear"
+    ],
+    "correctas": [
+     "nuclear"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "emma",
+    "en": [
+     "emma",
+     "rachel",
+     "rebecca"
+    ],
+    "correctas": [
+     "emma"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "terry",
+    "en": [
+     "terry",
+     "keith",
+     "alan"
+    ],
+    "correctas": [
+     "terry"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "jornadas",
+    "en": [
+     "outings",
+     "conferences",
+     "semester"
+    ],
+    "correctas": [
+     "days"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "situados",
+    "en": [
+     "located",
+     "situated",
+     "positioned"
+    ],
+    "correctas": [
+     "situated"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "lobos",
+    "en": [
+     "wolves",
+     "lobos",
+     "orcas"
+    ],
+    "correctas": [
+     "lobos",
+     "wolf",
+     "wolves"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "especialista",
+    "en": [
+     "specialist",
+     "specialising",
+     "specializing"
+    ],
+    "correctas": [
+     "specialist"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "octava",
+    "en": [
+     "fifth",
+     "sixth",
+     "seventh"
+    ],
+    "correctas": [
+     "eighth",
+     "octave"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "pendiente",
+    "en": [
+     "slope",
+     "steep",
+     "steeper"
+    ],
+    "correctas": [
+     "earring",
+     "outstanding",
+     "pending"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "realista",
+    "en": [
+     "realistic",
+     "realist",
+     "realism"
+    ],
+    "correctas": [
+     "realist",
+     "realistic"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "century",
+    "en": [
+     "warner",
+     "bros",
+     "touchstone"
+    ],
+    "correctas": [
+     "century"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "págs",
+    "en": [
+     "pp",
+     "isbn",
+     "vol"
+    ],
+    "correctas": [
+     "pp"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "definitivo",
+    "en": [
+     "definitive",
+     "eventual",
+     "initial"
+    ],
+    "correctas": [
+     "definite",
+     "definitive",
+     "final"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "recordar",
+    "en": [
+     "remember",
+     "remembering",
+     "remind"
+    ],
+    "correctas": [
+     "recall",
+     "remember",
+     "remembering"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "comenzando",
+    "en": [
+     "starting",
+     "began",
+     "commencing"
+    ],
+    "correctas": [
+     "beginning",
+     "commencing",
+     "starting"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "paraíso",
+    "en": [
+     "paradise",
+     "heaven",
+     "paradiso"
+    ],
+    "correctas": [
+     "paradise"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "autora",
+    "en": [
+     "author",
+     "novelist",
+     "bestselling"
+    ],
+    "correctas": [
+     "author"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "testimonio",
+    "en": [
+     "testimonies",
+     "witness",
+     "testimony"
+    ],
+    "correctas": [
+     "testimonial",
+     "testimony",
+     "witness"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "malta",
+    "en": [
+     "malta",
+     "maltese",
+     "gibraltar"
+    ],
+    "correctas": [
+     "malt",
+     "malta"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "aerolíneas",
+    "en": [
+     "airline",
+     "airlines",
+     "codeshare"
+    ],
+    "correctas": [
+     "airline",
+     "airlines"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "balonmano",
+    "en": [
+     "handball",
+     "futsal",
+     "handballer"
+    ],
+    "correctas": [
+     "handball"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "bloques",
+    "en": [
+     "blocks",
+     "stacked",
+     "stacks"
+    ],
+    "correctas": [
+     "blocks"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "positiva",
+    "en": [
+     "positive",
+     "negative",
+     "positively"
+    ],
+    "correctas": [
+     "positive"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "separa",
+    "en": [
+     "separates",
+     "separating",
+     "separated"
+    ],
+    "correctas": [
+     "separates"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "turner",
+    "en": [
+     "turner",
+     "rogers",
+     "matthews"
+    ],
+    "correctas": [
+     "turner"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "vidal",
+    "en": [
+     "vidal",
+     "calvo",
+     "carles"
+    ],
+    "correctas": [
+     "vidal"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "polvo",
+    "en": [
+     "dust",
+     "smoke",
+     "powder"
+    ],
+    "correctas": [
+     "dust",
+     "powder"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "tomada",
+    "en": [
+     "taken",
+     "retaken",
+     "captured"
+    ],
+    "correctas": [
+     "taken"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "balón",
+    "en": [
+     "dribble",
+     "ball",
+     "fouled"
+    ],
+    "correctas": [
+     "ball"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "fija",
+    "en": [
+     "fixed",
+     "flexible",
+     "determines"
+    ],
+    "correctas": [
+     "fixes"
+    ],
+    "acierta": false
+   },
+   {
+    "es": "declara",
+    "en": [
+     "declares",
+     "declare",
+     "declared"
+    ],
+    "correctas": [
+     "declare",
+     "declares"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "alegría",
+    "en": [
+     "joy",
+     "joyful",
+     "excitement"
+    ],
+    "correctas": [
+     "cheer",
+     "joy"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "luxemburgo",
+    "en": [
+     "luxembourg",
+     "belgium",
+     "luxemburg"
+    ],
+    "correctas": [
+     "luxembourg",
+     "luxemburg"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "prusia",
+    "en": [
+     "prussia",
+     "prussian",
+     "saxony"
+    ],
+    "correctas": [
+     "prussia",
+     "prussian"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "declaraciones",
+    "en": [
+     "statements",
+     "declarations",
+     "statement"
+    ],
+    "correctas": [
+     "declarations",
+     "statements"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "reconoció",
+    "en": [
+     "acknowledged",
+     "recognized",
+     "declared"
+    ],
+    "correctas": [
+     "acknowledged"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "cronología",
+    "en": [
+     "chronology",
+     "chronologies",
+     "timeline"
+    ],
+    "correctas": [
+     "chronology",
+     "timeline"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "cría",
+    "en": [
+     "breeding",
+     "rearing",
+     "breed"
+    ],
+    "correctas": [
+     "breeding"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "ilustraciones",
+    "en": [
+     "illustrations",
+     "illustrated",
+     "drawings"
+    ],
+    "correctas": [
+     "illustrations"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "cross",
+    "en": [
+     "cross",
+     "knight",
+     "kingsbury"
+    ],
+    "correctas": [
+     "cross"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "ron",
+    "en": [
+     "ron",
+     "dennis",
+     "eric"
+    ],
+    "correctas": [
+     "ron",
+     "rum"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "estrada",
+    "en": [
+     "estrada",
+     "castro",
+     "aguilar"
+    ],
+    "correctas": [
+     "estrada"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "singular",
+    "en": [
+     "singular",
+     "plural",
+     "unique"
+    ],
+    "correctas": [
+     "singular"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "vital",
+    "en": [
+     "vital",
+     "crucial",
+     "essential"
+    ],
+    "correctas": [
+     "vital"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "comenzado",
+    "en": [
+     "begun",
+     "started",
+     "began"
+    ],
+    "correctas": [
+     "begun",
+     "started"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "phoenix",
+    "en": [
+     "phoenix",
+     "dallas",
+     "houston"
+    ],
+    "correctas": [
+     "phoenix"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "semi",
+    "en": [
+     "semi",
+     "quasi",
+     "fully"
+    ],
+    "correctas": [
+     "semi"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "maine",
+    "en": [
+     "maine",
+     "kennebec",
+     "rockland"
+    ],
+    "correctas": [
+     "maine"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "varsovia",
+    "en": [
+     "warsaw",
+     "kraków",
+     "poznań"
+    ],
+    "correctas": [
+     "warsaw"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "masacre",
+    "en": [
+     "massacre",
+     "massacres",
+     "killings"
+    ],
+    "correctas": [
+     "massacre",
+     "slaughter"
+    ],
+    "acierta": true
+   },
+   {
+    "es": "vinos",
+    "en": [
+     "wines",
+     "wine",
+     "winemakers"
+    ],
+    "correctas": [
+     "wine",
+     "wines"
+    ],
+    "acierta": true
+   }
+  ]
+ }
+}

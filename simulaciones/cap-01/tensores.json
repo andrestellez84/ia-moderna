@@ -1,0 +1,164 @@
+{
+ "entorno": {
+  "fecha": "2026-10-14T09:54:06",
+  "sistema": "Windows-10-10.0.26100-SP0",
+  "python": "3.11.0",
+  "git_commit": "f8256c549151004d87c2c9d5edb894d824fc2bc0",
+  "git_cambios_sin_guardar": true,
+  "torch": "2.14.1+cu130",
+  "cuda": "13.0",
+  "cudnn": 92400,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "capacidad": "8.9",
+  "multiprocesadores": 24,
+  "vram_total_bytes": 8585216000,
+  "l2_bytes": 33554432,
+  "controlador": "617.14"
+ },
+ "dispositivo": "cuda",
+ "einsum": [
+  {
+   "expresion": "ij,jk->ik",
+   "formas": [
+    [
+     256,
+     256
+    ],
+    [
+     256,
+     256
+    ]
+   ],
+   "error_relativo": 2.3517906743242366e-07,
+   "propio_ms": 0.7679519951343536,
+   "torch_ms": 0.05411199852824211
+  },
+  {
+   "expresion": "btd,bsd->bts",
+   "formas": [
+    [
+     8,
+     128,
+     64
+    ],
+    [
+     8,
+     128,
+     64
+    ]
+   ],
+   "error_relativo": 2.9684288928548986e-07,
+   "propio_ms": 0.42134401202201843,
+   "torch_ms": 0.05478399991989136
+  },
+  {
+   "expresion": "bi,ij,bj->b",
+   "formas": [
+    [
+     512,
+     64
+    ],
+    [
+     64,
+     64
+    ],
+    [
+     512,
+     64
+    ]
+   ],
+   "error_relativo": 1.9232837993727787e-07,
+   "propio_ms": 0.12476800009608269,
+   "torch_ms": 0.07825599983334541
+  },
+  {
+   "expresion": "ii->",
+   "formas": [
+    [
+     1024,
+     1024
+    ]
+   ],
+   "error_relativo": 0.0,
+   "propio_ms": 0.05939200147986412,
+   "torch_ms": 0.03328000009059906
+  }
+ ],
+ "orden": [
+  {
+   "n": 16,
+   "terminos_directo": 65536,
+   "multiplicaciones_directo": 131072,
+   "multiplicaciones_pares": 8192,
+   "directo_ms": 0.10892799869179726,
+   "pares_ms": 0.08910400047898293,
+   "directo_mib": 0.27,
+   "pares_mib": 0.002,
+   "error_relativo": 2.2616600858782476e-07
+  },
+  {
+   "n": 32,
+   "terminos_directo": 1048576,
+   "multiplicaciones_directo": 2097152,
+   "multiplicaciones_pares": 65536,
+   "directo_ms": 0.11520000174641609,
+   "pares_ms": 0.09310400113463402,
+   "directo_mib": 12.0,
+   "pares_mib": 0.008,
+   "error_relativo": 1.953186199443735e-07
+  },
+  {
+   "n": 64,
+   "terminos_directo": 16777216,
+   "multiplicaciones_directo": 33554432,
+   "multiplicaciones_pares": 524288,
+   "directo_ms": 0.7443999946117401,
+   "pares_ms": 0.09678399935364723,
+   "directo_mib": 82.02,
+   "pares_mib": 0.031,
+   "error_relativo": 2.288786475901361e-07
+  }
+ ],
+ "distancias": {
+  "n": 1024,
+  "m": 1024,
+  "d": 256,
+  "bytes_intermedio_directo": 1073741824,
+  "bytes_tabla": 4194304,
+  "directa_mib": 2048.0,
+  "binomio_mib": 12.0,
+  "directa_ms": 20.970495223999023,
+  "binomio_ms": 0.4066080003976822,
+  "diferencia_maxima": 0.00018310546875,
+  "minimo_binomio": 327.13348388671875
+ },
+ "vistas": {
+  "forma": [
+   4096,
+   4096
+  ],
+  "mib_tabla": 64.0,
+  "transpuesta": {
+   "pasos": [
+    1,
+    4096
+   ],
+   "misma_memoria": true,
+   "mib": 0.0
+  },
+  "reshape_contigua": {
+   "misma_memoria": true,
+   "mib": 0.0
+  },
+  "reshape_de_transpuesta": {
+   "misma_memoria": false,
+   "mib": 64.0
+  }
+ },
+ "vram_pico_gib": {
+  "einsum": 0.0717,
+  "orden": 0.0881,
+  "distancias": 2.0177,
+  "vistas": 0.1329
+ }
+}

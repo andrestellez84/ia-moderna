@@ -1,0 +1,60 @@
+{
+ "entorno": {
+  "fecha": "2026-10-14T13:27:10",
+  "sistema": "Windows-10-10.0.26100-SP0",
+  "python": "3.11.0",
+  "git_commit": "f8256c549151004d87c2c9d5edb894d824fc2bc0",
+  "git_cambios_sin_guardar": true,
+  "torch": "2.14.1+cu130",
+  "cuda": "13.0",
+  "cudnn": 92400,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "capacidad": "8.9",
+  "multiprocesadores": 24,
+  "vram_total_bytes": 8585216000,
+  "l2_bytes": 33554432,
+  "controlador": "617.14"
+ },
+ "ficha": {
+  "sistema": "Windows-10-10.0.26100-SP0",
+  "procesador": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "nucleos_cpu": 16,
+  "ram_bytes": 68408578048,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "vram_bytes": 8585216000,
+  "capacidad": "8.9",
+  "multiprocesadores": 24,
+  "nucleos_cuda": 3072
+ },
+ "carrera": {
+  "pixeles": 14400000,
+  "iteraciones": 60,
+  "pasos_cadena": 2000,
+  "cpu": {
+   "independiente_ms": 7683.522399995127,
+   "encadenada_ms": 15.014500000688713
+  },
+  "cuda": {
+   "independiente_ms": 444.8010999985854,
+   "encadenada_ms": 94.41940000397153
+  },
+  "pixeles_distintos": 1380,
+  "aceleracion_independiente": 17.274063396020296,
+  "aceleracion_encadenada": 0.15901922698150128
+ },
+ "cabe": [
+  {
+   "formato": "32 bits",
+   "cuenta_bytes": 497759232.0,
+   "cabe": true,
+   "medida_bytes": 497759232
+  },
+  {
+   "formato": "16 bits",
+   "cuenta_bytes": 248879616.0,
+   "cabe": true,
+   "medida_bytes": 248879616
+  }
+ ],
+ "vram_pico_gib": 0.4636
+}

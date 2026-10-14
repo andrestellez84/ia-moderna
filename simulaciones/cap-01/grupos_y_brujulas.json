@@ -1,0 +1,275 @@
+{
+ "kmeans": {
+  "palabras": 4566,
+  "grupos": 40,
+  "curva": [
+   2694.66,
+   2808.25,
+   2841.88,
+   2858.1,
+   2866.79,
+   2872.67,
+   2876.48,
+   2878.9,
+   2880.36,
+   2881.49,
+   2882.35,
+   2883.05,
+   2883.66,
+   2883.99,
+   2884.26,
+   2884.48,
+   2884.77,
+   2884.88,
+   2884.97,
+   2885.05,
+   2885.19,
+   2885.26,
+   2885.35,
+   2885.44,
+   2885.54,
+   2885.77,
+   2885.98,
+   2886.15,
+   2886.27,
+   2886.35,
+   2886.39,
+   2886.42,
+   2886.46,
+   2886.56,
+   2886.67,
+   2886.7,
+   2886.74,
+   2886.77,
+   2886.82,
+   2886.88,
+   2886.95,
+   2887.01,
+   2887.05,
+   2887.08,
+   2887.11,
+   2887.13,
+   2887.16,
+   2887.18,
+   2887.2,
+   2887.23,
+   2887.27,
+   2887.29,
+   2887.36,
+   2887.39,
+   2887.42,
+   2887.45,
+   2887.49,
+   2887.51,
+   2887.53,
+   2887.53
+  ],
+  "monotona": true,
+  "finales": {
+   "kmeans++": [
+    2887.53,
+    2884.35,
+    2891.74,
+    2893.05,
+    2892.94,
+    2887.77,
+    2893.38,
+    2892.34,
+    2894.85,
+    2891.74
+   ],
+   "azar": [
+    2888.0,
+    2887.49,
+    2892.18,
+    2886.28,
+    2887.29,
+    2884.52,
+    2881.04,
+    2884.74,
+    2882.6,
+    2890.96
+   ]
+  }
+ },
+ "brujula": {
+  "parejas_es": 8,
+  "parejas_en": 8,
+  "coseno_direcciones_es_en": 0.856,
+  "profesiones": [
+   {
+    "masculino": "médico",
+    "femenino": "médica",
+    "ingles": "doctor",
+    "c_masc": 0.126,
+    "c_fem": -0.135,
+    "c_en": -0.019
+   },
+   {
+    "masculino": "enfermero",
+    "femenino": "enfermera",
+    "ingles": "nurse",
+    "c_masc": 0.035,
+    "c_fem": -0.379,
+    "c_en": -0.338
+   },
+   {
+    "masculino": "ingeniero",
+    "femenino": "ingeniera",
+    "ingles": "engineer",
+    "c_masc": 0.178,
+    "c_fem": -0.331,
+    "c_en": 0.134
+   },
+   {
+    "masculino": "profesor",
+    "femenino": "profesora",
+    "ingles": "professor",
+    "c_masc": 0.202,
+    "c_fem": -0.394,
+    "c_en": 0.023
+   },
+   {
+    "masculino": "abogado",
+    "femenino": "abogada",
+    "ingles": "lawyer",
+    "c_masc": 0.157,
+    "c_fem": -0.409,
+    "c_en": 0.054
+   },
+   {
+    "masculino": "secretario",
+    "femenino": "secretaria",
+    "ingles": "secretary",
+    "c_masc": 0.136,
+    "c_fem": -0.318,
+    "c_en": 0.007
+   },
+   {
+    "masculino": "cocinero",
+    "femenino": "cocinera",
+    "ingles": "cook",
+    "c_masc": 0.2,
+    "c_fem": -0.283,
+    "c_en": -0.006
+   },
+   {
+    "masculino": "científico",
+    "femenino": "científica",
+    "ingles": "scientist",
+    "c_masc": 0.14,
+    "c_fem": -0.08,
+    "c_en": 0.046
+   },
+   {
+    "masculino": "maestro",
+    "femenino": "maestra",
+    "ingles": "teacher",
+    "c_masc": 0.251,
+    "c_fem": -0.294,
+    "c_en": -0.031
+   },
+   {
+    "masculino": "juez",
+    "femenino": "jueza",
+    "ingles": "judge",
+    "c_masc": 0.14,
+    "c_fem": -0.352,
+    "c_en": 0.064
+   },
+   {
+    "masculino": "arquitecto",
+    "femenino": "arquitecta",
+    "ingles": "architect",
+    "c_masc": 0.166,
+    "c_fem": -0.398,
+    "c_en": 0.053
+   },
+   {
+    "masculino": "bailarín",
+    "femenino": "bailarina",
+    "ingles": "dancer",
+    "c_masc": 0.072,
+    "c_fem": -0.411,
+    "c_en": -0.176
+   },
+   {
+    "masculino": "cantante",
+    "femenino": "cantante",
+    "ingles": "singer",
+    "c_masc": -0.176,
+    "c_fem": -0.176,
+    "c_en": -0.127
+   },
+   {
+    "masculino": "periodista",
+    "femenino": "periodista",
+    "ingles": "journalist",
+    "c_masc": 0.016,
+    "c_fem": 0.016,
+    "c_en": -0.032
+   },
+   {
+    "masculino": "piloto",
+    "femenino": "piloto",
+    "ingles": "pilot",
+    "c_masc": 0.133,
+    "c_fem": 0.133,
+    "c_en": 0.016
+   }
+  ],
+  "brecha_gramatical_media": 0.466,
+  "spearman_masc_en": 0.581,
+  "gonen_goldberg": {
+   "palabras": 500,
+   "coseno_max_tras_borrar": 0.0,
+   "acierto_kmeans": 0.758,
+   "ejemplos_femeninas": [
+    "feminist",
+    "heroine",
+    "actress",
+    "woman",
+    "maid",
+    "herself",
+    "feminists",
+    "mrs"
+   ],
+   "ejemplos_masculinas": [
+    "himself",
+    "nephew",
+    "uncle",
+    "brother",
+    "son",
+    "grandson",
+    "brothers",
+    "his"
+   ]
+  },
+  "nurse": {
+   "antes": [
+    "nurses",
+    "nursing",
+    "dentist",
+    "therapist",
+    "hospital",
+    "surgeon",
+    "physician",
+    "psychiatrist",
+    "doctors",
+    "clinic"
+   ],
+   "despues": [
+    "nurses",
+    "nursing",
+    "dentist",
+    "surgeon",
+    "physician",
+    "hospital",
+    "psychiatrist",
+    "therapist",
+    "doctors",
+    "technician"
+   ]
+  }
+ }
+}
